@@ -1,0 +1,19 @@
+{
+  "name": "kalleyHome",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-base64-less": "^0.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ssh-deploy": "^0.4.1",
+    "less-plugin-base64": "^1.2.3"
+  },
+  "dependencies": {
+    "grunt-mustache-html": "^0.1.9",
+    "https-localhost": "^4.4.0",
+    "uuid": "^3.3.3"
+  }
+}
