@@ -2,9 +2,14 @@
 
 //elementos del header//
 
-.tab-content .carousel__rotativeBanner .banner-adglare [id*=adglare] {
+.tab-content .carousel__rotativeBanner .banner-adglare [id*=adglare],
+.destacados-ofertas .carousel__rotativeBanner .banner-adglare [id*=adglare]  {
   object-fit: cover;
   height: auto !important; 
+
+  @media @for-phone{
+    height: 440px !important; 
+  }
   
 }
 
