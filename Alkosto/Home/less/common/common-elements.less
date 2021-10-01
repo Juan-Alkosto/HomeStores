@@ -2,6 +2,17 @@
 
 //elementos del header//
 
+
+
+
+.carousel__rotativeBanner .banner-adglare [id*=adglare] {
+  object-fit: cover;
+  height: 420px !important; 
+  @media @for-phone{
+    height: 440px !important; 
+  }
+}
+
 .tab-content .carousel__rotativeBanner .banner-adglare [id*=adglare],
 .carrusel--destacados .carousel__rotativeBanner .banner-adglare [id*=adglare],
 .carrusel--categorias .carousel__rotativeBanner .banner-adglare [id*=adglare]   {
@@ -9,18 +20,9 @@
   height: auto !important; 
 
   @media @for-phone{
-    height: auto !important; 
+    height: 440px !important; 
   }
   
-}
-
-
-.carousel__rotativeBanner .banner-adglare [id*=adglare] {
-  object-fit: cover;
-  height: 420px !important; 
-  @media @for-phone{
-    height: auto !important; 
-  }
 }
 
 .content{
@@ -38,7 +40,7 @@
 .blanco{
   background: var(--alert-background-color);
   margin: -36px 0 0;
-  padding: 36px 0 0;
+  padding: 36px 0 0; 
 }
 
 .contenedor_gris{
