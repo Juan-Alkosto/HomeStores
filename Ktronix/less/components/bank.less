@@ -1,0 +1,90 @@
+.banco {
+    width: 31%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+    height: 157px;
+}
+
+.banco:first-child {
+    margin-left: 0;
+}
+
+.banco:last-child {
+    margin-right: 0;
+}
+
+.ctn-oferta-banco {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 6px 10px #00000024;
+    text-align: center;
+    transition: all 0.3s;
+    padding-bottom: 1px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100% !important;
+    height: 110px !important;
+    margin-top: 32px;
+    position: relative;
+}
+
+.logo-banco {
+    position: absolute;
+    top: -38%;
+    left: 0;
+    width: 95%;
+    text-align: center;
+}
+
+.txt-oferta-banco {
+    color: #707070;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 0px;
+    position: absolute;
+    width: 100% !important;
+    top: 40% !important;
+    overflow: hidden;
+}
+
+.txt-destacado-oferta-bancos {
+    color: #707070;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -11px;
+    position: absolute;
+    top: 70% !important;
+    width: 100% !important;
+    height: 27px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ctn-oferta-banco:hover {
+    box-shadow: 0px 12px 23px #0000003d;
+}
+
+@media @for-tablet-only{
+    .banco {
+        width: 31%;
+    }
+
+    .txt-oferta-banco {
+        font-size: 12px;
+        top: 45% !important;
+    }
+}
+
+@media @for-phone{
+    .banco {
+        width: 95%;
+        margin-bottom: 16px;
+    }    
+
+    .txt-destacado-oferta-bancos {
+        font-size: 17px;
+        height: 42px !important;
+        line-height: 20px;
+    }
+}

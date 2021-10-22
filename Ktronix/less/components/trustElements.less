@@ -1,0 +1,178 @@
+.carousel__rotativeBanner .banner-adglare [id*=adglare] {
+  object-fit: cover;
+  height: 420px !important; 
+  @media @for-phone{
+    height: 440px !important; 
+  }
+}
+
+.elementos_confianza {
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+  max-width: 1270px;
+  position: relative;
+  top: -30px;
+  z-index: 1;
+
+    @media @for-tablet-only{
+        height: 220px;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 8px;
+        top: 0px;
+      }
+
+      @media @for-phone{
+        height: 275px;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 16px;
+        width: 100%;
+        top: 0px;
+      } 
+
+      @media @for-desktop-up{
+        top: -32px;  
+      }
+
+}
+
+.elementos_sin {
+    width: 18.7%;
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #F8F8F8;
+    border-radius: 4px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    color: #444;
+    transition: all 0.3s;
+    align-items: center;
+    @media @for-big-desktop-up{
+      height: 199px !important;
+    }
+    @media @for-desktop-up{
+      height: 207px;
+    }
+    @media @for-tablet-only{
+        width: 27%;
+      }
+
+      @media @for-phone{
+        width: 75%;
+        height: 242px;
+      } 
+}
+
+.elementos_sin i {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 8px;
+    margin-right: 0;
+    color: #474747;
+    font-weight: 700;
+}
+
+.elementos_sin img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px 0 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.contenido_elementos { 
+    display: inline-block;
+    width: 100% !important;
+    @media @for-phone{
+        display: block;
+      } 
+}
+
+.contenido_elementos h3 {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--primary-color1);
+    @media @for-tablet-only{
+        white-space: normal;
+        font-size: 15px;
+      }
+    @media @for-phone{
+        white-space: normal;
+    }
+}
+
+.contenido_elementos h4 {
+  font-size: 14px;
+  font-weight: 400;
+  width: 95%;
+  margin: 0 auto;
+  height: 45px;
+    @media @for-tablet-only{
+        white-space: normal;
+      }
+    @media @for-phone{
+        white-space: normal;
+    }
+}
+
+.elementos_sin:hover {
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(158, 158, 158, 1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(158, 158, 158, 1);
+    box-shadow: 0px 3px 10px 0px rgba(158, 158, 158, 1);
+}
+
+.ultimo {
+    margin-right: 0 !important;
+}
+
+.cta-home {
+  font-size: 14px;
+  margin: 0 33px 0 auto;
+  text-align: right;
+  text-decoration: underline;
+  color: var(--primary-color1);
+}
+
+.cta-home .ico-font {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: var(--alert-background-color);
+  display: inline-block;
+  background: var(--primary-color1);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.carousel__rotativeBanner .owl-carousel .owl-dots {
+  margin-top: -40px !important;
+  position: relative;
+    top: -27px;
+    @media @for-phone{
+      margin-top: 0px !important;
+    top: 0px;
+    } 
+} 
+
+  .owl-carousel .owl-dots .owl-dot span {
+    border-radius: 50% !important;
+    width: 24px !important;
+    height: 24px !important;
+    border: solid 2px #FFF;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(158, 158, 158, 1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(158, 158, 158, 1);
+    box-shadow: 0px 3px 10px 0px rgba(158, 158, 158, 1);  
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  width: 36px !important;
+}

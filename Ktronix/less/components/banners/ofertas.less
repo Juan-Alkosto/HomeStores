@@ -1,0 +1,246 @@
+.colum_4 {
+    width: 23%;
+    display: inline-block;
+    margin: 0 8px;
+    height: 425px;
+}
+
+.pos_1 .producto img,
+.pos_2 .producto img,
+.ofertas_cont .producto img {
+    width: 100%;
+}
+
+.ofertas_cont {
+    position: relative;
+    width: 100%;
+    height: 425px;
+}
+
+.marco_ofertas_impar {
+    border: 1px solid #C7C7C7;
+    border-radius: 8px;
+    position: absolute;
+    height: 365px;
+    bottom: 0;
+    width: 100%;
+}
+
+.ofertas_cont .producto {
+    position: absolute;
+    right: 0 !important;
+    text-align: center;
+    width: 74%;
+    z-index: 1;
+    top: -5% !important;
+    left: 13%;
+    right: 13%;
+}
+
+.par .marco_ofertas_impar .logo {
+    top: 12px;
+}
+
+.par .marco_ofertas_impar .titulo {
+    top: 13% !important;
+}
+
+.par .pos_1 .legal {
+    position: absolute;
+    bottom: auto;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    color: #333;
+    top: 50%;
+}
+
+.par .marco_ofertas_impar {
+    border: 1px solid #C7C7C7;
+    border-radius: 8px;
+    position: absolute;
+    height: 365px;
+    bottom: auto;
+    width: 100%;
+    top: 0;
+}
+
+.par .producto {
+    position: absolute;
+    top: auto !important;
+    bottom: 0;
+    right: 13%;
+    left: 13%;
+    text-align: center;
+    width: 74%;
+    z-index: 1;
+}
+
+.impar .producto {
+    bottom: 0 !important;
+    top: auto !important;
+}
+
+.marco_ofertas_impar .logo {
+    position: absolute;
+    left: 0;
+    top: 39%;
+    width: 100% !important;
+    text-align: center;
+}
+
+.ofertas_cont .antes,
+.ofertas_cont .desde {
+    background: white !important;
+}
+
+.ofertas_cont .pos_1:hover {
+    box-shadow: none;
+}
+
+.ofertas_cont .img-hover {
+    transition: all 0.3s;
+}
+
+.ofertas_cont:hover .img-hover {
+    transform: scale(1.1);
+}
+
+.ofertas_cont .titulo {
+    position: absolute;
+    top: 49%;
+    left: 0 !important;
+    width: 100% !important;
+}
+
+.ofertas_cont .titulo h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.marco_ofertas_impar .label {
+    font-size: 12px;
+    bottom: auto;
+    right: 0;
+    top: 19%;
+    z-index: 2;
+}
+
+.par .label {
+    font-size: 12px;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    z-index: 2;
+}
+
+.marco_ofertas_impar .precios {
+    top: 60%;
+    left: 22%;
+    width: 56%;
+    right: 22%;
+}
+
+.par .marco_ofertas_impar .precios {
+    top: 21%;
+    left: 22%;
+    right: 22%;
+    width: 56%;
+}
+
+.par .marco_ofertas_impar h4,
+.ofertas_cont .titulo h4 {
+    display: none;
+}
+
+@media @for-desktop-up{
+    .colum_4 {
+        width: 22%;
+    }
+    .marco_ofertas_impar .precios {
+        top: 60%;
+        left: 13%;
+        width: 74%;
+        right: 13%;
+    }
+}
+
+@media @for-tablet-only{
+    .par .marco_ofertas_impar .precios,
+    .marco_ofertas_impar .precios {
+        width: 90%;
+        left: 5%;
+    }
+    .ofertas_cont .producto {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+    .par .producto {
+        left: 5%;
+        width: 90%;
+    }
+    .ofertas_cont .titulo h3 {
+        font-size: 16px;
+    }
+}
+
+@media @for-phone{
+    .colum_4 .par {
+        left: 0;
+        margin-left: 0 !important;
+        top: 0;
+    }
+    .colum_4 {
+        width: 95%;
+        margin-bottom: 16px;
+        margin-top: 25px;
+    }
+    .colum_4:first-child{
+        margin-top:30px;
+    }
+    .par .producto,
+    .ofertas_cont .producto {
+        left: 20%;
+        width: 60%;
+    }
+    .ofertas_cont .titulo h3 {
+        font-size: 20px;
+    }
+    .par .marco_ofertas_impar .precios,
+    .marco_ofertas_impar .precios {
+        width: 50%;
+        right: 23%;
+        left: auto;
+    }
+    .marco_ofertas_impar .precios {
+        top: 57%;
+    }
+    .marco_ofertas_impar {
+        height: 300px !important;
+    }
+    .ofertas_cont .titulo {
+        top: 51% !important;
+    }
+    .par .marco_ofertas_impar .titulo {
+        top: 15% !important;
+    }
+    .ofertas_cont .producto {
+        top: 0;
+    }
+    .marco_ofertas_impar .label {
+        height: fit-content;
+    }
+}
+
+@media @for-phone-mini{
+    .par .producto,
+    .ofertas_cont .producto {
+        left: 15%;
+        width: 70%;
+    }
+    .par .pos_1 .legal {
+        top: 55%;
+    }
+}

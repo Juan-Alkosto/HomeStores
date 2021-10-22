@@ -1,0 +1,83 @@
+@import url('https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css'); 
+
+h2{
+ font-size: 24px !important;
+}
+.contenedor_categorias {
+    width: 1270px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.filete-title-category {
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 35px;
+    padding: 0px;
+    padding-left: 0px !important;
+    height: 56px;
+}
+
+.title-category {
+    color: #444444;
+    border-bottom: 4px solid #DD171B;
+    float: left;
+    margin-bottom: 0px;
+    font-weight: bold;
+    position: relative;
+}
+
+.title-category .irAOfertas {
+    color: #DD171B;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.ctn-barra-lanzamientos {
+    margin-top: 44px;
+    margin-bottom: 4px;
+}
+
+.barra_lanzamiento {
+    margin-top: 0px;
+    height: 100px;
+}
+
+@media @for-tablet-only {
+    .contenedor_categorias {
+        width: 95%;
+    }
+}
+
+@media @for-tablet-portrait-up{
+    .margin-tablet{
+        margin-top: 165px;
+    }
+}
+
+@media @for-phone {
+
+    .contenedor_categorias {
+        width: 95%;
+        margin: 0 auto 12px;
+    }
+
+    .filete-title-category {
+        height: 30px;
+        border: 0px;
+    }
+
+    .title-category .irAOfertas {
+        display: none;
+    }
+    .title-category .flechaMobile:after {
+        content: "";
+        border: solid #DD171B;
+        border-width: 0 2px 2px 0;
+        padding: 5px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        position: absolute;
+        bottom: 8px;
+        right: -11px;
+    }
+}
