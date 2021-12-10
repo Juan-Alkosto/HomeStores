@@ -1,0 +1,548 @@
+<link href="https://cdn.jsdelivr.net/gh/UX-Alkosto/HomeStores@Staging/Ktronix/dist/css/styles.css" rel="stylesheet" />
+
+<style>
+
+    .k-contenedor-iva {
+        width: 100%;
+        margin: -16px auto 0;
+        background: url(/medias/contenedor.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDcxMDc0fGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oMGMvaGZkLzExNDQ0MTYyNzg5NDA2LnBuZ3wwZjdlMzA2MGU0ZDg3MWE4ZjJkNDNhODgyOTJjOGFhYjRmOTY0ZWI4M2UwODQzMzA5ZTdjMzI0YjgxYzUwZGQz);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+    }
+
+    .k-contenedor-elementos {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .k-colum-5 {
+        width: 49.8%;
+        display: inline-block;
+        vertical-align: middle;
+        color: var(--alert-background-color) !important;
+    }
+
+    .k-colum-5 img {
+        padding: 28px 0 21px 0;
+        width: 300px;
+    }
+
+    .luz-izq {
+        
+    }
+
+    .luz-der {
+        text-align: right;
+        background-position: top right;
+    }
+
+    .k-titulo-iva {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--alert-background-color);
+    }
+
+    .k-colum-5 span {
+        font-size: 12px;
+    }
+
+    .k-colum-5 span a,
+    .k-colum-5 span a:hover {
+        color: var(--alert-background-color);
+        text-decoration: underline;
+    }
+
+    .borde-inferior {
+        border-bottom: dashed 1px rgba(255, 255, 255, 0.3);
+        width: 100%;
+        margin: 16px auto 23px;
+    }
+
+    .k-cta {
+        background: #02A3DC;
+        border-radius: 4px;
+        width: 232px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 700;
+        float: right;
+        color: var(--alert-background-color);
+        height: 40px;
+        line-height: 40px;
+        margin-top: 8px;
+    }
+
+    .k-cta a,
+    .k-cta a:hover {
+        color: var(--alert-background-color);
+    }
+
+    .k-grid-container-category {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 24px 40px;
+        padding-bottom: 43px;
+    }
+
+    .k-grid-items-category {
+        cursor: pointer;
+        color: var(--alert-background-color);
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .k-product-contenedor {
+        width: 114px;
+        height: 114px;
+        border-radius: 50%;
+        border: solid 1px #02A3DC;
+        background: var(--alert-background-color);
+        margin: 0 auto 8px auto;
+        text-align: center;
+        transition: transform .4s;
+    }
+
+    .k-product-contenedor:hover {
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -webkit-transform: scale(1.1);
+        /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+
+    .k-product-contenedor img {
+        padding: 10px;
+    }
+
+    .k-elementos-confianza {
+        background: var(--button-primary-background-color-disabled);
+    }
+
+    .k-grid-container-elementos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 21px;
+    }
+
+    .k-grid-items-elementos {
+        cursor: pointer;
+        color: var(--text-color1);
+        text-align: center;
+        font-size: 14px;
+        padding: 16px 0;
+    }
+
+    .k-grid-items-elementos img {
+        width: 65px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 16px;
+    }
+
+    .k-textos-elementos {
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        width: 219px;
+    }
+
+    .k-titulo-elementos {
+        color: var(--primary-color2);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+
+    }
+
+    .k-titulo-elementos a,
+    .k-titulo-elementos a:hover {
+        color: var(--primary-color2);
+        text-decoration: none;
+    }
+
+    .k-text-sub,
+    .k-text-sub a,
+    .k-text-sub a:hover {
+        color: var(--text-color1) !important;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .k-logo-desktop {
+        display: block;
+    }
+
+    .k-logo-mobile {
+        display: none;
+    }
+    .k-categorias-mobile-titulo{
+        display: none;
+        font-size: 16px;
+        color: var(--alert-background-color);
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 600px) {
+        .k-categorias-mobile-titulo{
+        display: block;
+    }
+        .k-logo-desktop {
+            display: none;
+        }
+
+        .k-logo-mobile {
+            display: block;
+        }
+
+        .k-colum-5 img {
+            width: 300px;
+            padding: 0;
+            margin: 20px auto;
+        }
+
+        .luz-izq {
+            background: none;
+            background-position: 30px 0;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .k-grid-container-category {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 14px;
+            padding-bottom: 16px;
+        }
+
+        .k-contenedor-elementos {
+            width: 95%;
+        }
+
+        .k-product-contenedor {
+            width: 110px;
+            height: 110px;
+        }
+
+        .k-grid-container-elementos {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0px;
+            padding-bottom: 16px;
+        }
+
+        .k-grid-items-elementos {
+            border-bottom: solid 1px #E3E3E3;
+        }
+
+        .k-grid-items-elementos img {
+            width: 50px;
+        }
+
+        .k-text-sub,
+        .k-text-sub a,
+        .k-text-sub a:hover {
+            font-size: 12px;
+        }
+
+        .k-textos-elementos {
+            width: 77%;
+        }
+
+        .k-colum-5 {
+            height: auto;
+            width: 100%;
+        }
+
+        .luz-der {
+            background: transparent;
+            background-repeat: no-repeat;
+            text-align: center;
+            background-position: top right;
+            padding: 0;
+        }
+
+        .k-cta {
+            float: none;
+            margin: 8px auto 16px auto;
+        }
+        .k-grid-items-elementos:last-child{
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    @media (max-width: 360px) {
+        .k-product-contenedor {
+            width: 100px;
+            height: 100px;
+        }
+        .k-product-contenedor img{
+            width: 100%;
+        }
+    }   
+
+    @media (max-width: 320px) {
+
+        .k-product-contenedor {
+            width: 90px;
+            height: 90px;
+        }
+
+        .k-product-contenedor img {
+            padding: 10px;
+            width: 100%;
+        }
+    }
+</style>
+<div class="k-contenedor-iva">
+    <div class="k-contenedor-elementos borde-inferior">
+        <div class="k-colum-5 luz-izq">
+            <img class="k-logo-desktop"
+                src="/medias/logo-iva-kt.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMTAwfGltYWdlL3N2Zyt4bWx8ZGlhLXNpbi1pdmEvaDUxL2gzOS8xMTQ1NTYyMTg1NzMxMC5zdmd8ZDJkY2QzODY4ZjE4OWY5Y2M5MmFhNGJjN2I5NzY5YmY4ZjEzMjczZGU2ZjNjMDI4MTM0NjE0MTI5MzBiMThhMw" />
+            <img class="k-logo-mobile"
+                src="/medias/logo-iva-kt.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMTAwfGltYWdlL3N2Zyt4bWx8ZGlhLXNpbi1pdmEvaDUxL2gzOS8xMTQ1NTYyMTg1NzMxMC5zdmd8ZDJkY2QzODY4ZjE4OWY5Y2M5MmFhNGJjN2I5NzY5YmY4ZjEzMjczZGU2ZjNjMDI4MTM0NjE0MTI5MzBiMThhMw" />
+        </div>
+        <div class="k-colum-5 luz-der">
+            <div class="k-titulo-iva">Computadores, Celulares, <br />
+                Televisores, Neveras y mucho más.</div>
+            <span>Aplican T&C. <a href="/temporadas/dia-sin-iva/c/dia-sin-iva">Más información</a></span><br />
+            <a href="/ofertas">
+                <div class="k-cta">
+                    Ver ofertas destacadas
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="k-contenedor-elementos">
+        <div class="k-categorias-mobile-titulo">Navega las ofertas por categoría:</div>
+        <div class="k-grid-container-category">
+            <a href="/celulares/telefonos-celulares/c/BI_101_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/celular.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM4MTd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hkNS9oMWQvMTE0MjQ4NDIxNTQwMTQucG5nfGZkNjY0ODMxOTAxZjUyZDk5YjU5MzFiMGU5YjIyNzJjZDFiNTE3Y2Y1NTRkNDlhYWQ4YWM3MTU4NGQwNDM2M2Q" />
+                    </div>
+                    Celulares
+                </div>
+            </a>
+            <a href="/tv-video/televisores/c/BI_120_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/televisor.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ1Nzl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Zi9oMDcvMTE0MjM1NjIzMDE0NzAucG5nfDQ0YWQ4YmZhZmMwMGMyZTljZTQzN2UyNmQwNTc0NDAyMDcxMjdhMGIwZGQ3ZjAxNDllNDUwZmM4NmEwNzI5YmM" />
+                    </div>
+                    Televisores
+                </div>
+            </a>
+            <a href="/computadores-tablets/c/BI_COMP_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/computador.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gxOS9oMWQvMTE0MjM1NjYzMzE5MzQucG5nfGJjODA1NjBkYTljZmM0N2VkNWZiMzYzNzU3N2UxNzBhNWM4OTBlODJkN2EzNmNkZDhjOGE4MjVjODc2YmYwZDA" />
+                    </div>
+                    Computadores
+                </div>
+            </a>
+            <a href="/computadores-tablets/tablets-ipads/c/BI_107_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/tabletas.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMzNDB8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Yy9oYmQvMTE0MjM1Nzc1Mzg1OTAucG5nfDIzYmJlNjFmMGJhZDQ0ZDI1YmNmYTg1N2UwNjEzNjU0NDgxZDk5M2Y3ODVkZTc3ZWZkNjZiNzQ3NmZjOTM1ODE" />
+                    </div>
+                    Tabletas
+                </div>
+            </a>
+            
+            <a href="/audio/audifonos/c/BI_111_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/audifonos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDY5NDh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g4ZS9oNzAvMTE0MjUyNDgxNDk1MzQucG5nfDkzMjZkMDEyMTdlNDc3OWU3Mjk5NGNjMDNkYjJmZDUwY2QyZTc5NTBjZmI2NzI5ZjQwZWY1ZTc5ZWI4MjljYjI" />
+                    </div>
+                    Audífonos
+                </div>
+            </a>
+            <a href="/smartwatch/c/BI_SMAW_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/srmatwatch.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM3MjR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g1My9oZWEvMTE0MjQ3OTk2NTM5MTgucG5nfDJmNjFmZGZmM2YzZTk4NWIwNDhlYzIzZmE3MjJjZWE0ODJkYTFmN2Q4ZTQ3ZDdhNTM1YTVkNTI3ZWQ2MDY2ODY" />
+                    </div>
+                    Smartwatch
+                </div>
+            </a>
+            <a href="/audio/audio-hogar/parlantes-subwoofer/c/BI_0021_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/parlante.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNDd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g1MC9oYzkvMTE0MjQ3OTk3ODQ5OTAucG5nfDc3MmJlOGIzNzQ2M2VjNjZjNDMxNDVkNDRhMjQ2Y2UyZGJiYjgyNzJmNjk5OGI2ZmViN2FkZDUyNWZiZGUzYzA" />
+                    </div>
+                    Parlantes
+                </div>
+            </a>
+            <a href="/audio/audio-hogar/barras-sonido/c/BI_0024_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/parlantes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMwNTR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2My9oMzAvMTE0MjM1NzkzMDgwNjIucG5nfDM0OTQzNWVhMmZkNzMwMTI3M2RhNTVjY2YyOTYwMDM5YzY3ZGNmNzY0MTU2YTlhYThlOGZlNDU3ZmYyMjYxYzE" />
+                    </div>
+                    Barras de Sonido
+                </div>
+            </a>
+
+            <a href="/videojuegos/juegos/c/BI_132_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/videojuegos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxMDl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3Yy9oYjcvMTE0MjQ3OTkzMjYyMzgucG5nfDIwNTc5NzFiODFjNmMwYzZiZTllNTJkYzI5MGQ3MTcxYzY0MGU3OWJlZmJkZGM5NDRmZjY3NWQ3MTlkNGJjNGU" />
+                    </div>
+                    Videojuegos
+                </div>
+            </a>
+
+            <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/neveras/c/BI_A29_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/nevera.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM4MTd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gyOS9oYTgvMTE0MjM1NzM4MDMwMzgucG5nfGFkOWM3NGRkMDAzODg1ZDZlMWFkNTI0NWUzYTlmYmFhZDBmOWI2OTcxYTYwMzY4ZDQzYzRjNDU5ZTJkYzU2MmM" />
+                    </div>
+                    Neveras
+                </div>
+            </a>
+            <a href="/electrodomesticos/grandes-electrodomesticos/lavado/c/BI_0600_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/lavadoras.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxODl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hiNi9oNjUvMTE0MjM1NzQwNjUxODIucG5nfDYyNzNmMTc4NjNlMGQyYjU0MzZlNDRkMzUxOTZmODhhY2M4OGUzNzJmYTEzMmNhNjExMzIyZDJlYmFmY2NmNDk" />
+                    </div>
+                    Lavadoras y Secadoras
+                </div>
+            </a>
+            
+            
+            
+            
+            <a href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/preparacion-de-alimentos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxNTd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hmOS9oYjcvMTE0MjM1NzgxOTM5NTAucG5nfGUxMDEwOWNmYWM3ZTczN2ZiM2ZiMTJlMTEzMjFjYTRiZWI3MjY3Mjg0YWRhOGZhNzYyMDgyYWQ0Zjk2MTc4ZmE" />
+                    </div>
+                    Preparación de alimentos
+                </div>
+            </a>
+            <a href="/electrodomesticos/grandes-electrodomesticos/cocina/c/BI_0580_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/hornos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM3ODd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3My9oOWIvMTE0MjM1Nzg3MTgyMzgucG5nfGY2MmJlN2Y3MTI1NWI3YjYwNzdhMTc3MWNiMTI4NjEzNDA2MGQ4ODcxMDg4MDBkZTJkODA5YTBkZTdkMGNhMDE" />
+                    </div>
+                    Estufas, Hornos, Microondas
+                </div>
+            </a>
+            
+            <a href="/casa-inteligente-domotica/c/BI_CAIN_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/casa-inteligente.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNjJ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3MC9oYzMvMTE0NDU0MzA1ODMzMjYucG5nfGE2NzMxZjllNTA0OGNkOTFhNTAxMGNlMzg2ZTg2NWZjMDg3NWNiYmU1ZDlhZWJiNWRkYjQ1YjZmZGNhOTdiY2E" />
+                    </div>
+                    Casa Inteligente
+                </div>
+            </a>
+            
+            
+            <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/cuidado-personal.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMwNTF8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gwMC9oZTcvMTE0MjM1ODYwMjU1MDIucG5nfGFlZmZkY2M3NTJiMzU2NmFlM2ZjZGQ0NTdlZjU4YmE5OGQzNDRiMzBlZmY5MjM0YjBiZjE1MDAzYzJjY2NhYzc" />
+                    </div>
+                    Cuidado Personal
+                </div>
+            </a>
+            <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_KTRON">
+                <div class="k-grid-items-category k-logo-desktop">
+                    <div class="k-product-contenedor">
+                        <img
+                            src="/medias/cuidado-hogar.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQwNjN8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hhZi9oZGUvMTE0MjM1ODY1MTcwMjIucG5nfDgyZGY0YWQ2MTM3MGYxNWVlN2IxZDY4MjY3NjgyN2UyMmMzZjAxZTdiZDA5MmRmZjZmZjMxNzEzZTcyYmU4NmU" />
+                    </div>
+                    Cuidado de Hogar
+                </div>
+            </a>
+            
+        </div>
+    </div>
+
+</div>
+<div class="k-elementos-confianza">
+    <div class="k-contenedor-elementos">
+        <div class="k-grid-container-elementos">
+            <div class="k-grid-items-elementos">
+                <a href="/entregas-devoluciones/envio-gratis/c/envio-gratis">
+                    <img loading="lazy" class="js-async-image show-image"
+                        src="/medias/envio.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDkzOTB8aW1hZ2Uvc3ZnK3htbHxkaWEtc2luLWl2YS9oNzQvaDc1LzExNDI0MjcyMTg3NDIyLnN2Z3xiNGE1MTEyYjUzYjVlOGVmMmU4ODNiN2RjMjVmYmQ0MWRhMGIxZTAwNzFiNGMzOWNlNjlkYTk3ZTM2NDFlMTM1"
+                        alt="Envío Gratis">
+                    <div class="k-textos-elementos">
+                        <div class="k-titulo-elementos">Envío Gratis</div>
+                        <div class="k-text-sub">Contamos con envíos a 600 municipios en todo el país.</div>
+                    </div>
+                </a>
+            </div>
+            <div class="k-grid-items-elementos">
+                <a href="/gana-50">
+                    <img loading="lazy" class="js-async-image show-image"
+                        src="/medias/gana-50.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDkzNjB8aW1hZ2Uvc3ZnK3htbHxkaWEtc2luLWl2YS9oOGQvaDViLzExNDI0MjcyNDQ5NTY2LnN2Z3wyN2MzNjZlM2IwYmNhMjY1NWIwMjlhZGU3NmI0ZjY5N2MxMjg0YzliYTNlNTc4ZmI3MTJhYWYzOTNkYWYzNjZl"
+                        alt="Gana la mitad de tu compra">
+                    <div class="k-textos-elementos">
+                        <div class="k-titulo-elementos">Gana la mitad de tu compra</div>
+                        <div class="k-text-sub">Valoramos tu lealtad. <br />¡En tiendas e internet!</div>
+                    </div>
+                </a>
+            </div>
+            <div class="k-grid-items-elementos">
+                <a href="/entregas-devoluciones/recoge-en-tienda/c/recoge-tienda">
+                    <img loading="lazy" class="js-async-image show-image"
+                        src="/medias/tienda.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDk5MDl8aW1hZ2Uvc3ZnK3htbHxkaWEtc2luLWl2YS9oNmIvaDg0LzExNDI0MjkzNDg2NjIyLnN2Z3xhNjJjOWUzMmM3MzExYjNmNTkxY2IxZmJkOGUyM2FhOTMyNmYyNTUzMjNiNWY1MDVhNDJiZDg2NmUyYzM1MzZl"
+                        alt="Recoge en tienda">
+                    <div class="k-textos-elementos">
+                        <div class="k-titulo-elementos">Recoge en tienda</div>
+                        <div class="k-text-sub">Compra en línea y recoge en tienda.</div>
+                    </div>
+                </a>
+            </div>
+            <div class="k-grid-items-elementos">
+                <a href="/politicas/cambios-devoluciones/c/cambios-devoluciones">
+                    <img loading="lazy" class="js-async-image show-image"
+                        src="/medias/calendario.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzk3fGltYWdlL3N2Zyt4bWx8ZGlhLXNpbi1pdmEvaGNiL2hmMS8xMTQyNDI5NDA3NjQ0Ni5zdmd8ZWE4NDc1NzIyZWE5OGI4YWIwN2FhNzU3YzUyZThlODVkMDFkYWY0YjA4YWU3ZWVkZTAwNGRlNjM2NmM1NWM4Mg"
+                        alt="Envío Gratis">
+                    <div class="k-textos-elementos">
+                        <div class="k-titulo-elementos">Plazo de devolución</div>
+                        <div class="k-text-sub">Tienes 30 días calendarios.<br/> <span>Aplican T&C.</span> </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section Barra de Lanzamientos -->
+<div class="contenedor_categorias barra_lanzamiento" style="margin: 24px auto 0; height: auto;">
+
+
+
+<!-- AdGlare: KT Lanzamientos-banner_web -->
+<span id=zone524468624></span>
+<script>
+    (function(r,d,u) {
+        var s = d.createElement(r); s.async = true;
+        u += '&cb=' + Date.now() + Math.random();       
+        s.src = u; var n = d.getElementsByTagName(r)[0];
+        n.parentNode.insertBefore(s, n);
+    })('script',document,'//engine.alkst.co/?524468624');
+</script>
+    
+    
+    
+    <!-- Fin Barra de Lanzamientos -->
