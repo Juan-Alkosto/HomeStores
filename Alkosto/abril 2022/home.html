@@ -1,0 +1,544 @@
+<style>
+    .breadcrumb-section {
+        display: none !important;
+    }
+
+    .home-ak-contenedor {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .home-ak-contenedor .banner-principal-ak {
+        width: 648px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 32px 0;
+    }
+
+    .home-ak-contenedor .contenedor-categorias {
+        width: 608px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 32px 0;
+        padding-left: 24px;
+    }
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50px !important;
+        background: var(--primary-color1) !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    .ak-grid-items-category {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 16px 32px;
+    }
+
+    .ak-grid-items-category {
+        cursor: pointer;
+        color: var(--primary-color2);
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .k-product-contenedor {
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        line-height: 95px;
+        background: var(--alert-background-color);
+        margin: 0 auto 8px auto;
+        text-align: center;
+        transition: transform .4s;
+        -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    .k-product-contenedor img {
+        padding: 10px;
+        width: 90px;
+        height: auto;
+    }
+
+    .k-product-contenedor:hover {
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -webkit-transform: scale(1.1);
+        /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+
+    .home-ak-contenedor .owl-carousel .owl-nav button.owl-next:before,
+    .home-ak-contenedor .owl-carousel .owl-nav button.owl-prev:before {
+        color: white !important;
+    }
+
+    .home-ak-contenedor .carousel__rotativeBanner .owl-carousel .owl-dots {
+        margin-top: -38px;
+    }
+
+    .home-ak-contenedor .owl-carousel .owl-dots .active span {
+        background-color: var(--primary-color1) !important;
+    }
+
+    .ak-grid-items-category a,
+    .ak-grid-items-category a:hover {
+        color: var(--primary-color2);
+    }
+
+    .k-grid-items-category.ofertas {
+        color: var(--primary-color1) !important;
+    }
+
+    .ofertas .k-product-contenedor {
+        border: solid 1px var(--primary-color1) !important;
+        box-shadow: none;
+        background: rgba(235, 91, 37, 0.1);
+        font-size: 56px;
+        line-height: 102px;
+    }
+
+    .ak-fondo-gris-desktop {
+        background: var(--button-primary-background-color-disabled);
+        padding: 16px 0;
+    }
+
+    .ak-grid-items-destacados {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px;
+        margin-bottom: 8px;
+        padding-top: 8px;
+    }
+
+    .ak-grid-items-destacado {
+        cursor: pointer;
+        color: var(--primary-color2);
+        text-align: center;
+        height: 372px;
+        overflow: hidden;
+    }
+
+    .ak-nombre-producto {
+        font-size: 16px;
+        color: var(--text-color1);
+        margin-bottom: 0;
+        margin-top: 16px;
+    }
+
+    .ak-precio-antes {
+        font-size: 14px;
+        color: var(--text-color2);
+        text-decoration: line-through;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .ak-precio-ahora {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--primary-color1);
+        margin: 0;
+    }
+
+    .ak-elementos-connfianza {
+        background: #EBEBEB;
+        margin-bottom: 24px;
+    }
+
+    .ak-elementos-connfianza a,
+    .ak-elementos-connfianza a:hover {
+        color: var(--text-color1);
+    }
+
+    .ak-elemento {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        text-align: center;
+        width: 24%;
+        padding: 8px 0;
+    }
+
+    .ak-elemento img {
+        height: 40px;
+        width: auto;
+    }
+
+    .ak-clear {
+        clear: both;
+    }
+
+    .ak-banner-izq {
+        width: 360px;
+        height: 609px;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 8px;
+    }
+
+    .ak-banner-cont-derecha {
+        display: inline-block;
+        vertical-align: top;
+        width: 900px;
+        margin-left: 16px;
+    }
+</style>
+
+<div class="home-ak-contenedor">
+    <div class="banner-principal-ak">
+        <div class="col-xs-12 col-md-12 no-padding component__banner">
+            <div class="carousel__rotativeBanner">
+                <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                    <div class="banner-adglare">
+                        <!-- AdGlare: AK_HOME-BannerPrincipal-p1 -->
+                        <span id=zone368154941></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?368154941');
+                        </script>
+                    </div>
+                    <div class="banner-adglare">
+                        <!-- AdGlare: AK_HOME-BannerPrincipal-p2 -->
+                        <span id=zone577976354></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?577976354');
+                        </script>
+                    </div>
+                    <div class="banner-adglare">
+                        <!-- AdGlare: AK_HOME-BannerPrincipal-p3 -->
+                        <span id=zone618511627></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?618511627');
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-categorias">
+        <div class="ak-grid-items-category">
+            <div class="ak-grid-items-category">
+                <a href="/celulares/c/BI_CELU_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/celular.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM4MTd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hkNS9oMWQvMTE0MjQ4NDIxNTQwMTQucG5nfGZkNjY0ODMxOTAxZjUyZDk5YjU5MzFiMGU5YjIyNzJjZDFiNTE3Y2Y1NTRkNDlhYWQ4YWM3MTU4NGQwNDM2M2Q">
+                        </div>
+                        Celulares
+                    </div>
+                </a>
+                <a href="/computadores-tablets/c/BI_COMP_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/computador.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gxOS9oMWQvMTE0MjM1NjYzMzE5MzQucG5nfGJjODA1NjBkYTljZmM0N2VkNWZiMzYzNzU3N2UxNzBhNWM4OTBlODJkN2EzNmNkZDhjOGE4MjVjODc2YmYwZDA">
+                        </div>
+                        Computadores
+                    </div>
+                </a>
+                <a href="/tv-video/c/BI_TVVI_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/televisor.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ1Nzl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Zi9oMDcvMTE0MjM1NjIzMDE0NzAucG5nfDQ0YWQ4YmZhZmMwMGMyZTljZTQzN2UyNmQwNTc0NDAyMDcxMjdhMGIwZGQ3ZjAxNDllNDUwZmM4NmEwNzI5YmM">
+                        </div>
+                        Televisores
+                    </div>
+                </a>
+                <a href="/electrodomesticos/c/BI_ELHO_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/estufa.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDc0Njh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hjNC9oODAvMTE2ODUxNDIyMDAzNTAucG5nfDI2NjVkMjMzYWUzNGJhNTQ2ZmEzMTZiNjMzYThlOWE3Y2U4OTM5YWUwYzhhM2FiZjY0NmNkNjEyODFiMjZjMGU">
+                        </div>
+                        Electro
+                    </div>
+                </a>
+                <a href="/hogar/c/BI_HOGA_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/Grupo-8945.png?context=bWFzdGVyfEhvbWUtS2FsbGV5fDY4NDV8aW1hZ2UvcG5nfEhvbWUtS2FsbGV5L2hmMy9oZDMvMTIzMzQ1NTI3MTExOTgucG5nfGExN2NhZjA5NDI2ZmY1M2QzZDUxNTA3YmFlOTI0ODIyM2IwYjNmNTU1ZDVhYjlmODc3NGQzYmQ0NTA1NzFjNzM">
+                        </div>
+                        Hogar
+                    </div>
+                </a>
+                <a href="/accesorios-electronica/c/BI_AELE_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/accesorios.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMyODh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gzNy9oNWMvMTE2NzE4MzY5NTA1NTgucG5nfDJlNTIxZjdmZWI1NzY1ODRhNmY5ZmM3YjE3Y2UwMTc3YjNjZjBhMWUwMDQ5NzdjMGI4YzExMjJiMjdiYjVmYWE">
+                        </div>
+                        Accesorios
+                    </div>
+                </a>
+                <a href="/videojuegos/c/BI_VIJU_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/videojuegos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxMDl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3Yy9oYjcvMTE0MjQ3OTkzMjYyMzgucG5nfDIwNTc5NzFiODFjNmMwYzZiZTllNTJkYzI5MGQ3MTcxYzY0MGU3OWJlZmJkZGM5NDRmZjY3NWQ3MTlkNGJjNGU">
+                        </div>
+                        Videojuegos
+                    </div>
+                </a>
+                <a href="/deportes/c/BI_DEPO_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/deportes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzY2fGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oZTEvaDFkLzExNjg1MTQ1MDE4Mzk4LnBuZ3xhOGUwNDliNTE0OWRmYmMxZWQzNDJmMWUyZWMyMmJkN2IyZmYwNzZhYWMxODM3MGQ1MDQyNmQwNjk0N2IwN2E2">
+                        </div>
+                        Deportes
+                    </div>
+                </a>
+                <a href="/pines-virtuales/c/pines-virtuales">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/Grupo-8945.png?context=bWFzdGVyfEhvbWUtS2FsbGV5fDY4NjN8aW1hZ2UvcG5nfEhvbWUtS2FsbGV5L2g5MC9oNDcvMTIzMzQ1NTMyNjgyNTQucG5nfGRmNDkyNzQ0M2M4MDc5MDg0M2RhYzVjZWE4OGUwNmUzNTE2OGIxMDZjOWVlZjAxMDE0ZGNiZWIyODVhMWM1Y2U">
+                        </div>
+                        Netflix y Pines
+                    </div>
+                </a>
+                <a href="/smartwatch/c/BI_SMAW_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/srmatwatch.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM3MjR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g1My9oZWEvMTE0MjQ3OTk2NTM5MTgucG5nfDJmNjFmZGZmM2YzZTk4NWIwNDhlYzIzZmE3MjJjZWE0ODJkYTFmN2Q4ZTQ3ZDdhNTM1YTVkNTI3ZWQ2MDY2ODY">
+                        </div>
+                        Smartwatch
+                    </div>
+                </a>
+                <a href="/audio/c/BI_AUDI_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/parlantes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMwNTR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2My9oMzAvMTE0MjM1NzkzMDgwNjIucG5nfDM0OTQzNWVhMmZkNzMwMTI3M2RhNTVjY2YyOTYwMDM5YzY3ZGNmNzY0MTU2YTlhYThlOGZlNDU3ZmYyMjYxYzE">
+                        </div>
+                        Audio
+                    </div>
+                </a>
+                <a href="/llantas/c/llantas">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/computador.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gxOS9oMWQvMTE0MjM1NjYzMzE5MzQucG5nfGJjODA1NjBkYTljZmM0N2VkNWZiMzYzNzU3N2UxNzBhNWM4OTBlODJkN2EzNmNkZDhjOGE4MjVjODc2YmYwZDA">
+                        </div>
+                        Llantas
+                    </div>
+                </a>
+                <a href="/juguetes/c/BI_JUGUE_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/juguete.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ0NTl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hmYy9oOWMvMTE2ODUxNDY3MjIzMzQucG5nfDU5MjEzOTIyNzY3NTQ0YTNjOGFlZDRlOGVjZTQwMjQ0MzZkY2UwNjFhY2U4MDI5YTk3YjljNDk1ODQwMmIwNmM">
+                        </div>
+                        Juguetes
+                    </div>
+                </a>
+                <a href="/marcas/gildan/c/gildan">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/Grupo-8525.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDUwNDV8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2OC9oZWMvMTE2NzIyNjE1OTEwNzAucG5nfGQyNzFjMjYyNTY3NGRhODM1NmVmNGM3MzU1NzQ1ZDI1NDAxNzAyM2UxZDUyMzBkNTI5ZjdkNGFhODM3M2Q0YjI">
+                        </div>
+                        Ropa
+                    </div>
+                </a>
+                <a href="/ofertas">
+                    <div class="k-grid-items-category ofertas">
+                        <div class="k-product-contenedor">
+                            <i class="ico-font alk-icon-offers"></i>
+                        </div>
+                        Ofertas
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ak-fondo-gris-desktop">
+    <div class="home-ak-contenedor">
+        <k-title-underline type="center">
+            <h3>Ofertas destacadas</h3>
+        </k-title-underline>
+        <div class="ak-grid-items-destacados">
+            <div class="ak-grid-items-destacado">
+                <!-- AdGlare: AK_HOME-Destacado-p1 -->
+                <span id=zone556003567></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?556003567');
+                </script>
+            </div>
+            <div class="ak-grid-items-destacado">
+                <!-- AdGlare: AK_HOME-Destacado-p2 -->
+                <span id=zone552073562></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?552073562');
+                </script>
+            </div>
+            <div class="ak-grid-items-destacado">
+                <!-- AdGlare: AK_HOME-Destacado-p3 -->
+                <span id=zone129286758></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?129286758');
+                </script>
+            </div>
+            <div class="ak-grid-items-destacado">
+                <!-- AdGlare: AK_HOME-Destacado-p4 -->
+                <span id=zone771048778></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?771048778');
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ak-elementos-connfianza">
+    <div class="home-ak-contenedor">
+        <a href="/entregas-devoluciones/envio-gratis/c/envio-gratis">
+            <div class="ak-elemento">
+                <img
+                    src="/medias/icono-envio.svg?context=bWFzdGVyfEljb25vcyBBbGtvc3RvfDczOTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQWxrb3N0by9oZDcvaGZiLzEwNDc1MjY5NTIxNDM4LnN2Z3w1NzEzNjAxMDc3NmE1MDU2YjEwNGU0NTg4ZmY1MTJjNjM5NDg5YWVjOWFhZTgyOTUwZTA2MzJkM2I4ZTgxZmQz" />
+                Envío Gratis a 600 municipios
+            </div>
+        </a>
+        <a href="/gana-50">
+            <div class="ak-elemento">
+                <img
+                    src="/medias/icono-50.svg?context=bWFzdGVyfEljb25vcyBBbGtvc3RvfDc4MDZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQWxrb3N0by9oYTMvaGNmLzEwNDc1MjcwMDEyOTU4LnN2Z3xjZjg1NWYwZGVjMjJlMWU2NGZkZjczYTNiMjlmYzIwODA5MmQwZGUyNjg5ZmZmYzRmMzJhMWYyMjZlOTc0MGMx" />
+                Gana la mitad de tu compra
+            </div>
+        </a>
+        <a href="/entregas-devoluciones/recoge-en-tienda/c/recoge-tienda">
+            <div class="ak-elemento">
+                <img
+                    src="/medias/icono-tiendas.svg?context=bWFzdGVyfEljb25vcyBBbGtvc3RvfDYxMDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQWxrb3N0by9oODcvaDUwLzEwNDc1MjcwNjAyNzgyLnN2Z3w4MzhkOWM1Y2Q5ZjEyMGI4MzE2ZTg0MTM4MGRkYzhjZTQzMDA1MGE4YWNjMGY0M2E1ZTMxZTRhYmMzNmQ3Nzk3" />
+                Compra en línea y recoge en tienda
+            </div>
+        </a>
+        <a href="/politicas/cambios-devoluciones/c/cambios-devoluciones">
+            <div class="ak-elemento">
+                <img
+                    src="https://www.alkosto.com/medias/calendario.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzk3fGltYWdlL3N2Zyt4bWx8ZGlhLXNpbi1pdmEvaGNiL2hmMS8xMTQyNDI5NDA3NjQ0Ni5zdmd8ZWE4NDc1NzIyZWE5OGI4YWIwN2FhNzU3YzUyZThlODVkMDFkYWY0YjA4YWU3ZWVkZTAwNGRlNjM2NmM1NWM4Mg" />
+                Tiempos de cambios y devoluciones
+            </div>
+        </a>
+    </div>
+</div>
+<div class="home-ak-contenedor">
+    <k-title-underline type="center">
+        <h3>Nuestras novedades</h3>
+    </k-title-underline>
+    <div class="ak-clear"></div>
+    <div class="ak-banner-izq">
+        <!-- AdGlare: AK_HOME-novedades-izq -->
+        <span id=zone782525735></span>
+        <script>
+            (function (r, d, u) {
+                var s = d.createElement(r); s.async = true;
+                u += '&cb=' + Date.now() + Math.random();
+                s.src = u; var n = d.getElementsByTagName(r)[0];
+                n.parentNode.insertBefore(s, n);
+            })('script', document, '//engine.alkst.co/?782525735');
+        </script>
+    </div>
+    <div class="ak-banner-cont-derecha">
+        <div class="col-xs-12 col-md-12 no-padding component__banner">
+            <div class="carousel__rotativeBanner">
+                <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                    <div class="banner-adglare">
+                        <!-- AdGlare: AK_HOME-novedades-rotativo-p1 -->
+                        <span id=zone310184502></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?310184502');
+                        </script>
+                    </div>
+                    <div class="banner-adglare">
+                        <!-- AdGlare: AK_HOME-novedades-rotativo-p2 -->
+                        <span id=zone577808352></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?577808352');
+                        </script>
+                    </div>
+                    <div class="banner-adglare">
+                        <!-- AdGlare: AK_HOME-novedades-rotativo-p3 -->
+                        <span id=zone437718982></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?437718982');
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
