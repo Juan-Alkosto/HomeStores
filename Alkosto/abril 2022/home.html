@@ -257,6 +257,7 @@
         overflow: hidden;
         margin-bottom: 32px;
     }
+
     .ak-cta {
         font-size: 14px;
         color: var(--primary-color1);
@@ -264,9 +265,124 @@
         font-weight: normal;
         margin: 0;
     }
+
+    @media screen and (max-width: 540px) {
+        .ak-elementos-connfianza {
+            display: none;
+        }
+
+        .home-ak-contenedor .banner-principal-ak {
+            width: 100%;
+            margin: 0;
+            background: var(--button-primary-text-color);
+        }
+
+        .home-ak-contenedor .owl-carousel .owl-nav button.owl-next:before,
+        .home-ak-contenedor .owl-carousel .owl-nav button.owl-prev:before {
+            color: white !important;
+            background: var(--primary-color1);
+        }
+
+        .home-ak-contenedor .contenedor-categorias {
+            width: 90%;
+            display: block;
+            margin: 0;
+            padding: 32px 0;
+            padding-right: 0;
+            margin: 0 auto;
+        }
+
+        .ak-grid-items-category {
+            grid-template-columns: repeat(3, 55%);
+            grid-gap: 16px 20px;
+        }
+
+        .ak-grid-items-destacados {
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+            grid-gap: 16px;
+            margin-bottom: 8px;
+            padding-top: 8px;
+            padding-left: 16px;
+        }
+
+        .scroll-mobile-grid {
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .ak-fondo-gris {
+            background: var(--button-primary-background-color-disabled);
+            padding-top: 8px;
+        }
+
+        .ak-fondo-gris-desktop {
+            background: var(--alert-background-color);
+            padding: 16px 0;
+        }
+
+        .ak-banner-cont-derecha {
+            display: inline-block;
+            vertical-align: top;
+            width: 92%;
+            margin: 0 16px;
+        }
+
+        .ak-banner-izq {
+            width: 92%;
+            height: auto;
+            display: block;
+            vertical-align: top;
+            padding-top: 8px;
+            margin: 8px auto 16px auto;
+        }
+
+        .ak-grid-items-vitrina {
+            margin-top: 16px;
+        }
+
+        .ak-banner-lanzamiento {
+            width: 92%;
+            margin: 16px auto 24px;
+            padding-bottom: 32px;
+        }
+
+        .ak-mob-sep {
+            margin-top: 24px;
+        }
+
+        .ak-grid-items-bancos {
+            grid-template-columns: repeat(4, 60%);
+            grid-gap: 0;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .ak-grid-items-category {
+            grid-template-columns: repeat(3, 84px);
+        }
+
+        .home-ak-contenedor .contenedor-categorias {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .k-product-contenedor {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .k-product-contenedor img {
+            width: 70px;
+        }
+    }
 </style>
 
-<div class="home-ak-contenedor">
+<div class="home-ak-contenedor ak-fondo-gris">
     <div class="banner-principal-ak">
         <div class="col-xs-12 col-md-12 no-padding component__banner">
             <div class="carousel__rotativeBanner">
@@ -458,54 +574,56 @@
         <k-title-underline type="center">
             <h3>Ofertas destacadas</h3>
         </k-title-underline>
-        <div class="ak-grid-items-destacados">
-            <div class="ak-grid-items-destacado">
-                <!-- AdGlare: AK_HOME-Destacado-p1 -->
-                <span id=zone556003567></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?556003567');
-                </script>
-            </div>
-            <div class="ak-grid-items-destacado">
-                <!-- AdGlare: AK_HOME-Destacado-p2 -->
-                <span id=zone552073562></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?552073562');
-                </script>
-            </div>
-            <div class="ak-grid-items-destacado">
-                <!-- AdGlare: AK_HOME-Destacado-p3 -->
-                <span id=zone129286758></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?129286758');
-                </script>
-            </div>
-            <div class="ak-grid-items-destacado">
-                <!-- AdGlare: AK_HOME-Destacado-p4 -->
-                <span id=zone771048778></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?771048778');
-                </script>
+        <div class="scroll-mobile-grid">
+            <div class="ak-grid-items-destacados">
+                <div class="ak-grid-items-destacado">
+                    <!-- AdGlare: AK_HOME-Destacado-p1 -->
+                    <span id=zone556003567></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?556003567');
+                    </script>
+                </div>
+                <div class="ak-grid-items-destacado">
+                    <!-- AdGlare: AK_HOME-Destacado-p2 -->
+                    <span id=zone552073562></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?552073562');
+                    </script>
+                </div>
+                <div class="ak-grid-items-destacado">
+                    <!-- AdGlare: AK_HOME-Destacado-p3 -->
+                    <span id=zone129286758></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?129286758');
+                    </script>
+                </div>
+                <div class="ak-grid-items-destacado">
+                    <!-- AdGlare: AK_HOME-Destacado-p4 -->
+                    <span id=zone771048778></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?771048778');
+                    </script>
+                </div>
             </div>
         </div>
     </div>
@@ -542,7 +660,7 @@
         </a>
     </div>
 </div>
-<div class="home-ak-contenedor">
+<div class="home-ak-contenedor ak-fondo-gris ak-mob-sep">
     <k-title-underline type="center">
         <h3>Nuestras novedades</h3>
     </k-title-underline>
@@ -602,42 +720,44 @@
                 </div>
             </div>
         </div>
-        <div class="ak-grid-items-vitrina">
-            <div class="ak-grid-items-vitr">
-                <!-- AdGlare: AK_HOME-vtirina-p1 -->
-                <span id=zone123226416></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?123226416');
-                </script>
-            </div>
-            <div class="ak-grid-items-vitr">
-                <!-- AdGlare: AK_HOME-vtirina-p2 -->
-                <span id=zone840099573></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?840099573');
-                </script>
-            </div>
-            <div class="ak-grid-items-vitr">
-                <!-- AdGlare: AK_HOME-vtirina-p3 -->
-                <span id=zone181532608></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?181532608');
-                </script>
+        <div class="scroll-mobile-grid">
+            <div class="ak-grid-items-vitrina">
+                <div class="ak-grid-items-vitr">
+                    <!-- AdGlare: AK_HOME-vtirina-p1 -->
+                    <span id=zone123226416></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?123226416');
+                    </script>
+                </div>
+                <div class="ak-grid-items-vitr">
+                    <!-- AdGlare: AK_HOME-vtirina-p2 -->
+                    <span id=zone840099573></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?840099573');
+                    </script>
+                </div>
+                <div class="ak-grid-items-vitr">
+                    <!-- AdGlare: AK_HOME-vtirina-p3 -->
+                    <span id=zone181532608></span>
+                    <script>
+                        (function (r, d, u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?181532608');
+                    </script>
+                </div>
             </div>
         </div>
     </div>
@@ -661,93 +781,113 @@
     <k-title-underline type="center">
         <h3>Recomendados para ti</h3>
     </k-title-underline>
-    <div class="ak-grid-items-perder">
-        <div class="ak-grid-items-perd">
-            <!-- AdGlare: AK_HOMEperder-p1 -->
-            <span id=zone265531448></span>
-            <script>
-                (function (r, d, u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?265531448');
-            </script>
-        </div>
-        <div class="ak-grid-items-perd">
-            <!-- AdGlare: AK_HOMEperder-p2 -->
-            <span id=zone169947954></span>
-            <script>
-                (function (r, d, u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?169947954');
-            </script>
-        </div>
-        <div class="ak-grid-items-perd">
-            <!-- AdGlare: AK_HOMEperder-p3 -->
-            <span id=zone150527615></span>
-            <script>
-                (function (r, d, u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?150527615');
-            </script>
-        </div>
-        <div class="ak-grid-items-perd">
-            <!-- AdGlare: AK_HOMEperder-p4 -->
-            <span id=zone442761329></span>
-            <script>
-                (function (r, d, u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?442761329');
-            </script>
+    <div class="scroll-mobile-grid">
+        <div class="ak-grid-items-perder">
+            <div class="ak-grid-items-perd">
+                <!-- AdGlare: AK_HOMEperder-p1 -->
+                <span id=zone265531448></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?265531448');
+                </script>
+            </div>
+            <div class="ak-grid-items-perd">
+                <!-- AdGlare: AK_HOMEperder-p2 -->
+                <span id=zone169947954></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?169947954');
+                </script>
+            </div>
+            <div class="ak-grid-items-perd">
+                <!-- AdGlare: AK_HOMEperder-p3 -->
+                <span id=zone150527615></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?150527615');
+                </script>
+            </div>
+            <div class="ak-grid-items-perd">
+                <!-- AdGlare: AK_HOMEperder-p4 -->
+                <span id=zone442761329></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?442761329');
+                </script>
+            </div>
         </div>
     </div>
 </div>
-<div class="home-ak-contenedor">
+<div class="home-ak-contenedor ak-mob-sep">
     <k-title-underline type="center">
         <h3>Ofertas con Bancos</h3>
     </k-title-underline>
-    <div class="ak-grid-items-bancos">
-        <div class="ak-grid-items-banco">
-            <a href="{landing_url}">
-                <img
-                    src="/medias/Grupo-8968.png?context=bWFzdGVyfHJvb3R8MTU3NDV8aW1hZ2UvcG5nfGg1ZC9oNmIvMTIzNDczMzcwODA4NjIucG5nfDI2Yzg3NDIxNDcyOWI0ZTdiMjAzZGRmYTFmNmZmNTE5MjAxNWJjNmJhYmM5ZjU0MWViYzc2YTdhZDRlNTg5OTY" />
-                <h4 class="ak-nombre-producto">Tarjeta de crédito Alkosto</h4>
-                <h5 class="ak-cta">Conoce las ofertas</h5>
-            </a>
-        </div>
-        <div class="ak-grid-items-banco">
-            <a href="{landing_url}">
-                <img
-                    src="/medias/Grupo-8968.png?context=bWFzdGVyfHJvb3R8MTU3NDV8aW1hZ2UvcG5nfGg1ZC9oNmIvMTIzNDczMzcwODA4NjIucG5nfDI2Yzg3NDIxNDcyOWI0ZTdiMjAzZGRmYTFmNmZmNTE5MjAxNWJjNmJhYmM5ZjU0MWViYzc2YTdhZDRlNTg5OTY" />
-                <h4 class="ak-nombre-producto">Tarjeta de crédito Alkosto</h4>
-                <h5 class="ak-cta">Conoce las ofertas</h5>
-            </a>
-        </div>
-        <div class="ak-grid-items-banco">
-            <a href="{landing_url}">
-                <img
-                    src="/medias/Grupo-8968.png?context=bWFzdGVyfHJvb3R8MTU3NDV8aW1hZ2UvcG5nfGg1ZC9oNmIvMTIzNDczMzcwODA4NjIucG5nfDI2Yzg3NDIxNDcyOWI0ZTdiMjAzZGRmYTFmNmZmNTE5MjAxNWJjNmJhYmM5ZjU0MWViYzc2YTdhZDRlNTg5OTY" />
-                <h4 class="ak-nombre-producto">Tarjeta de crédito Alkosto</h4>
-                <h5 class="ak-cta">Conoce las ofertas</h5>
-            </a>
-        </div>
-        <div class="ak-grid-items-banco">
-            <a href="{landing_url}">
-                <img
-                    src="/medias/Grupo-8968.png?context=bWFzdGVyfHJvb3R8MTU3NDV8aW1hZ2UvcG5nfGg1ZC9oNmIvMTIzNDczMzcwODA4NjIucG5nfDI2Yzg3NDIxNDcyOWI0ZTdiMjAzZGRmYTFmNmZmNTE5MjAxNWJjNmJhYmM5ZjU0MWViYzc2YTdhZDRlNTg5OTY" />
-                <h4 class="ak-nombre-producto">Tarjeta de crédito Alkosto</h4>
-                <h5 class="ak-cta">Conoce las ofertas</h5>
-            </a>
+    <div class="scroll-mobile-grid">
+        <div class="ak-grid-items-bancos">
+            <div class="ak-grid-items-banco">
+                <!-- AdGlare: AK_HOME-banco-p1 -->
+                <span id=zone302229070></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?302229070');
+                </script>
+            </div>
+            <div class="ak-grid-items-banco">
+                <!-- AdGlare: AK_HOME-banco-p2 -->
+                <span id=zone147879260></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?147879260');
+                </script>
+            </div>
+            <div class="ak-grid-items-banco">
+                <!-- AdGlare: AK_HOME-banco-p3 -->
+                <span id=zone252229758></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?252229758');
+                </script>
+            </div>
+            <div class="ak-grid-items-banco">
+                <!-- AdGlare: AK_HOME-banco-p4 -->
+                <span id=zone792072404></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?792072404');
+                </script>
+            </div>
         </div>
     </div>
 </div>
