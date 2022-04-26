@@ -39,7 +39,7 @@
         width: 32px !important;
         height: 32px !important;
         border-radius: 50px !important;
-        background: var(--primary-color1) !important;
+        background: var(--alert-background-color) !important;
     }
 
     .carousel__rotativeBanner .banner-adglare {
@@ -89,7 +89,7 @@
 
     .home-ak-contenedor .owl-carousel .owl-nav button.owl-next:before,
     .home-ak-contenedor .owl-carousel .owl-nav button.owl-prev:before {
-        color: white !important;
+        color: var(--primary-color1) !important;
     }
 
     .home-ak-contenedor .carousel__rotativeBanner .owl-carousel .owl-dots {
@@ -134,7 +134,7 @@
         cursor: pointer;
         color: var(--primary-color2);
         text-align: center;
-        height: 372px;
+        height: 392px;
         overflow: hidden;
     }
 
@@ -266,7 +266,21 @@
         margin: 0;
     }
 
+    .owl-carousel .owl-nav button.owl-next:before,
+    .owl-carousel .owl-nav button.owl-prev:before {
+        font-size: 24px;
+    }
+
     @media screen and (max-width: 540px) {
+
+        .ak-grid-items-perder{
+            margin-left: 16px;
+        }
+
+        .ak-elementos-connfianza {
+            display: none;
+        }
+
         .ak-elemento img {
             height: 80px;
             width: auto;
@@ -288,11 +302,18 @@
             background: var(--button-primary-text-color);
         }
 
-        .home-ak-contenedor .owl-carousel .owl-nav button.owl-next:before,
-        .home-ak-contenedor .owl-carousel .owl-nav button.owl-prev:before {
-            color: white !important;
-            background: var(--primary-color1);
+        .owl-carousel .owl-nav .owl-prev,
+        .owl-carousel .owl-nav .owl-next {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50px !important;
+            background: var(--alert-background-color) !important;
+            -webkit-box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 10%);
+            -moz-box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.10);
+            box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 10%);
         }
+
+
 
         .home-ak-contenedor .contenedor-categorias {
             width: 90%;
@@ -368,6 +389,21 @@
         .ak-grid-items-bancos {
             grid-template-columns: repeat(4, 60%);
             grid-gap: 0;
+        }
+
+        .owl-carousel.rotativeBanner .owl-nav button.owl-prev {
+            left: 8px;
+            background: var(--alert-background-color) !important;
+        }
+
+        .owl-carousel.rotativeBanner .owl-nav button.owl-next {
+            right: 8px;
+            background: var(--alert-background-color) !important;
+        }
+
+        .owl-carousel.rotativeBanner .owl-nav button.owl-prev,
+        .owl-carousel.rotativeBanner .owl-nav button.owl-next{
+            top: 50% !important;
         }
     }
 
@@ -490,22 +526,13 @@
                         Electro
                     </div>
                 </a>
-                <a href="/hogar/c/BI_HOGA_ALKOS">
+                <a href="/audio/c/BI_AUDI_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
                             <img
-                                src="/medias/Grupo-8945.png?context=bWFzdGVyfEhvbWUtS2FsbGV5fDY4NDV8aW1hZ2UvcG5nfEhvbWUtS2FsbGV5L2hmMy9oZDMvMTIzMzQ1NTI3MTExOTgucG5nfGExN2NhZjA5NDI2ZmY1M2QzZDUxNTA3YmFlOTI0ODIyM2IwYjNmNTU1ZDVhYjlmODc3NGQzYmQ0NTA1NzFjNzM">
+                                src="/medias/parlantes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMwNTR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2My9oMzAvMTE0MjM1NzkzMDgwNjIucG5nfDM0OTQzNWVhMmZkNzMwMTI3M2RhNTVjY2YyOTYwMDM5YzY3ZGNmNzY0MTU2YTlhYThlOGZlNDU3ZmYyMjYxYzE">
                         </div>
-                        Hogar
-                    </div>
-                </a>
-                <a href="/accesorios-electronica/c/BI_AELE_ALKOS">
-                    <div class="k-grid-items-category">
-                        <div class="k-product-contenedor">
-                            <img
-                                src="/medias/accesorios.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMyODh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gzNy9oNWMvMTE2NzE4MzY5NTA1NTgucG5nfDJlNTIxZjdmZWI1NzY1ODRhNmY5ZmM3YjE3Y2UwMTc3YjNjZjBhMWUwMDQ5NzdjMGI4YzExMjJiMjdiYjVmYWE">
-                        </div>
-                        Accesorios
+                        Audio
                     </div>
                 </a>
                 <a href="/videojuegos/c/BI_VIJU_ALKOS">
@@ -517,22 +544,13 @@
                         Videojuegos
                     </div>
                 </a>
-                <a href="/deportes/c/BI_DEPO_ALKOS">
+                <a href="/accesorios-electronica/c/BI_AELE_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
                             <img
-                                src="/medias/deportes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzY2fGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oZTEvaDFkLzExNjg1MTQ1MDE4Mzk4LnBuZ3xhOGUwNDliNTE0OWRmYmMxZWQzNDJmMWUyZWMyMmJkN2IyZmYwNzZhYWMxODM3MGQ1MDQyNmQwNjk0N2IwN2E2">
+                                src="/medias/accesorios.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMyODh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gzNy9oNWMvMTE2NzE4MzY5NTA1NTgucG5nfDJlNTIxZjdmZWI1NzY1ODRhNmY5ZmM3YjE3Y2UwMTc3YjNjZjBhMWUwMDQ5NzdjMGI4YzExMjJiMjdiYjVmYWE">
                         </div>
-                        Deportes
-                    </div>
-                </a>
-                <a href="/pines-virtuales/c/pines-virtuales">
-                    <div class="k-grid-items-category">
-                        <div class="k-product-contenedor">
-                            <img
-                                src="/medias/Grupo-8945.png?context=bWFzdGVyfEhvbWUtS2FsbGV5fDY4NjN8aW1hZ2UvcG5nfEhvbWUtS2FsbGV5L2g5MC9oNDcvMTIzMzQ1NTMyNjgyNTQucG5nfGRmNDkyNzQ0M2M4MDc5MDg0M2RhYzVjZWE4OGUwNmUzNTE2OGIxMDZjOWVlZjAxMDE0ZGNiZWIyODVhMWM1Y2U">
-                        </div>
-                        Netflix y Pines
+                        Accesorios
                     </div>
                 </a>
                 <a href="/smartwatch/c/BI_SMAW_ALKOS">
@@ -544,15 +562,55 @@
                         Smartwatch
                     </div>
                 </a>
-                <a href="/audio/c/BI_AUDI_ALKOS">
+                <a href="/computadores-tablets/tablets-ipads/c/BI_107_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
                             <img
-                                src="/medias/parlantes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMwNTR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2My9oMzAvMTE0MjM1NzkzMDgwNjIucG5nfDM0OTQzNWVhMmZkNzMwMTI3M2RhNTVjY2YyOTYwMDM5YzY3ZGNmNzY0MTU2YTlhYThlOGZlNDU3ZmYyMjYxYzE">
+                                src="/medias/tabletas.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMzNDB8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Yy9oYmQvMTE0MjM1Nzc1Mzg1OTAucG5nfDIzYmJlNjFmMGJhZDQ0ZDI1YmNmYTg1N2UwNjEzNjU0NDgxZDk5M2Y3ODVkZTc3ZWZkNjZiNzQ3NmZjOTM1ODE">
                         </div>
-                        Audio
+                        Tabletas
                     </div>
                 </a>
+                <a href="/hogar/c/BI_HOGA_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/Grupo-8945.png?context=bWFzdGVyfHJvb3R8ODA3OHxpbWFnZS9wbmd8aDQ0L2gxYi8xMjM1MjgzMjQwNTUzNC5wbmd8MmRkZTA4MGIzOTdhMjUzMDUwNTlkMGYyZjY4MTk1YThlOGZiODNhYmIxNjRmMTE2MWI2ODA2MzNhMTM5NDFkYQ">
+                        </div>
+                        Hogar
+                    </div>
+                </a>
+                <a href="/colchones/c/BI_COLC_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/Grupo-8945.png?context=bWFzdGVyfHJvb3R8NTkyMHxpbWFnZS9wbmd8aGU1L2g2OC8xMjM1Mjc5NTM3NzY5NC5wbmd8MGJhZDNhNDE1NzJjYzY2ZjgwMmM4MzUwMDZkNzUwZGMyMjNhOWNiNWM3YWQ3MjkzYzI4MzJiNjg0OGYyYWNmNw">
+                        </div>
+                        Colchones
+                    </div>
+                </a>
+                <a href="/muebles/c/BI_MUEB_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/Grupo-8945.png?context=bWFzdGVyfEhvbWUtS2FsbGV5fDY4NDV8aW1hZ2UvcG5nfEhvbWUtS2FsbGV5L2hmMy9oZDMvMTIzMzQ1NTI3MTExOTgucG5nfGExN2NhZjA5NDI2ZmY1M2QzZDUxNTA3YmFlOTI0ODIyM2IwYjNmNTU1ZDVhYjlmODc3NGQzYmQ0NTA1NzFjNzM">
+                        </div>
+                        Muebles
+                    </div>
+                </a>
+
+                <a href="/deportes/c/BI_DEPO_ALKOS">
+                    <div class="k-grid-items-category">
+                        <div class="k-product-contenedor">
+                            <img
+                                src="/medias/deportes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzY2fGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oZTEvaDFkLzExNjg1MTQ1MDE4Mzk4LnBuZ3xhOGUwNDliNTE0OWRmYmMxZWQzNDJmMWUyZWMyMmJkN2IyZmYwNzZhYWMxODM3MGQ1MDQyNmQwNjk0N2IwN2E2">
+                        </div>
+                        Deportes
+                    </div>
+                </a>
+
+
+
                 <a href="/llantas/c/llantas">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
@@ -562,24 +620,7 @@
                         Llantas
                     </div>
                 </a>
-                <a href="/juguetes/c/BI_JUGUE_ALKOS">
-                    <div class="k-grid-items-category">
-                        <div class="k-product-contenedor">
-                            <img
-                                src="/medias/juguete.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ0NTl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hmYy9oOWMvMTE2ODUxNDY3MjIzMzQucG5nfDU5MjEzOTIyNzY3NTQ0YTNjOGFlZDRlOGVjZTQwMjQ0MzZkY2UwNjFhY2U4MDI5YTk3YjljNDk1ODQwMmIwNmM">
-                        </div>
-                        Juguetes
-                    </div>
-                </a>
-                <a href="/marcas/gildan/c/gildan">
-                    <div class="k-grid-items-category">
-                        <div class="k-product-contenedor">
-                            <img
-                                src="/medias/Grupo-8525.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDUwNDV8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2OC9oZWMvMTE2NzIyNjE1OTEwNzAucG5nfGQyNzFjMjYyNTY3NGRhODM1NmVmNGM3MzU1NzQ1ZDI1NDAxNzAyM2UxZDUyMzBkNTI5ZjdkNGFhODM3M2Q0YjI">
-                        </div>
-                        Ropa
-                    </div>
-                </a>
+
                 <a href="/ofertas">
                     <div class="k-grid-items-category ofertas">
                         <div class="k-product-contenedor">
