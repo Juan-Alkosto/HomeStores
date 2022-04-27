@@ -206,7 +206,7 @@
     }
 
     .ak-banner-cont-derecha .owl-dots {
-        margin-top: -50px !important;
+        margin-top: -40px !important;
     }
 
     .ak-banner-lanzamiento {
@@ -271,9 +271,33 @@
         font-size: 24px;
     }
 
+    .ak-ocultar-mob{
+        display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        .ak-banner-cont-derecha {
+            width: 880px;
+        }
+
+        .ak-grid-items-vitr {
+            width: 294px;
+        }
+
+        .ak-grid-items-category {
+            grid-gap: 16px 24px;
+        }
+
+    }
+
     @media screen and (max-width: 540px) {
 
-        .ak-grid-items-perder{
+        .ak-ocultar-mob{
+        display: block;
+    }
+
+        .ak-grid-items-perder {
             margin-left: 16px;
         }
 
@@ -319,7 +343,7 @@
             width: 90%;
             display: block;
             margin: 0;
-            padding: 32px 0;
+            padding: 16px 0 32px;
             padding-right: 0;
             margin: 0 auto;
         }
@@ -402,9 +426,18 @@
         }
 
         .owl-carousel.rotativeBanner .owl-nav button.owl-prev,
-        .owl-carousel.rotativeBanner .owl-nav button.owl-next{
+        .owl-carousel.rotativeBanner .owl-nav button.owl-next {
             top: 50% !important;
         }
+
+        .home-ak-contenedor .carousel__rotativeBanner .owl-carousel .owl-dots {
+            margin-top: -34px;
+        }
+
+        .ak-banner-cont-derecha .owl-dots {
+            margin-top: -31px !important;
+        }
+
     }
 
     @media screen and (max-width: 320px) {
@@ -488,6 +521,11 @@
         </div>
     </div>
     <div class="contenedor-categorias">
+        <div class="ak-ocultar-mob" style="margin-bottom: 32px;">
+            <k-title-underline type="center">
+                <h3>Compra por categorías</h3>
+            </k-title-underline>   
+        </div>
         <div class="ak-grid-items-category">
             <div class="ak-grid-items-category">
                 <a href="/celulares/c/BI_CELU_ALKOS">
