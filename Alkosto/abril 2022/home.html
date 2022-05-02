@@ -75,7 +75,7 @@
 
     .k-product-contenedor img {
         padding: 10px;
-        width: 90px;
+        width: 84px;
         height: auto;
     }
 
@@ -119,7 +119,7 @@
 
     .ak-fondo-gris-desktop {
         background: var(--button-primary-background-color-disabled);
-        padding: 16px 0;
+        padding: 0 16px 16px;
     }
 
     .ak-grid-items-destacados {
@@ -163,6 +163,7 @@
     .ak-elementos-connfianza {
         background: #EBEBEB;
         margin-bottom: 24px;
+        margin-top: -10px;
     }
 
     .ak-elementos-connfianza a,
@@ -203,6 +204,10 @@
         width: 900px;
         margin-left: 16px;
         margin-top: 8px;
+    }
+
+    .ak-banner-cont-derecha .carousel__rotativeBanner {
+        height: 280px !important;
     }
 
     .ak-banner-cont-derecha .owl-dots {
@@ -285,6 +290,12 @@
 
     }
 
+    .page-homepage .carousel__rotativeBanner,
+    .page-homepage .ak-banner-cont-derecha .carousel__rotativeBanner .owl-stage-outer,
+    .page-homepage .carousel__rotativeBanner .rotativeBanner {
+        min-height: 280px !important;
+    }
+
     .ak-banner-mas-vendido:last-child {
         margin-right: 0;
     }
@@ -307,8 +318,15 @@
 
     @media screen and (max-width: 540px) {
 
+        .page-homepage .carousel__rotativeBanner,
+        .page-homepage .carousel__rotativeBanner .owl-stage-outer,
+        .page-homepage .carousel__rotativeBanner .rotativeBanner {
+            min-height: 414px !important;
+        }
+
         .ak-grid-items-banco {
-            width: 320px;
+            width: 90%;
+            height: 204px;
         }
 
         .ak-banner-mas-vendido {
@@ -410,6 +428,7 @@
             vertical-align: top;
             width: 92%;
             margin: 0 16px;
+            padding-bottom: 16px;
         }
 
         .ak-banner-izq {
@@ -422,17 +441,19 @@
         }
 
         .ak-grid-items-vitrina {
-            margin-top: 16px;
+            margin-top: 24px;
         }
 
         .ak-banner-lanzamiento {
             width: 92%;
             margin: 16px auto 24px;
             padding-bottom: 32px;
+            height: 84px;
         }
 
         .ak-mob-sep {
-            margin-top: 24px;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
 
         .ak-grid-items-bancos {
@@ -493,9 +514,70 @@
             margin-right: auto;
         }
 
+        .ak-grid-items-perd {
+            cursor: pointer;
+            width: 308px;
+            height: 276px;
+            margin-top: 8px;
+        }
+
+        .alto-mob {
+            margin-top: 24px;
+        }
+
+    }
+
+    @media screen and (max-width: 412px) {
+
+        .ak-grid-items-vitrina {
+            margin-top: 36px;
+        }
+    }
+
+    @media screen and (max-width: 384px) {
+
+        .page-homepage .carousel__rotativeBanner,
+        .page-homepage .carousel__rotativeBanner .owl-stage-outer,
+        .page-homepage .carousel__rotativeBanner .rotativeBanner {
+            min-height: 380px !important;
+        }
+
+        .ak-grid-items-vitr {
+            width: 294px;
+            margin-top: 16px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+
+        .page-homepage .carousel__rotativeBanner,
+        .page-homepage .carousel__rotativeBanner .owl-stage-outer,
+        .page-homepage .carousel__rotativeBanner .rotativeBanner {
+            min-height: 360px !important;
+        }
+
+        .ak-grid-items-vitr {
+            width: 294px;
+            margin-top: 16px;
+        }
     }
 
     @media screen and (max-width: 320px) {
+
+        .ak-banner-mas-vendido {
+            height: 130px;
+        }
+
+        .ak-grid-items-vitrina {
+            margin-top: 36px;
+        }
+
+        .page-homepage .carousel__rotativeBanner,
+        .page-homepage .carousel__rotativeBanner .owl-stage-outer,
+        .page-homepage .carousel__rotativeBanner .rotativeBanner {
+            min-height: 320px !important;
+        }
+
         .ak-grid-items-category {
             grid-template-columns: repeat(3, 84px);
         }
@@ -601,7 +683,7 @@
                 <a href="/celulares/c/BI_CELU_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
-                            <img src="/medias/celulares.jpg?context=bWFzdGVyfHJvb3R8MjQzMnxpbWFnZS9qcGVnfGg4Ni9oMmMvMTIzNTk1MzE3MjQ4MzAuanBnfDY1NmVlNmU5MDdhZTQxNTlmMjQ0ZjMwYzMwZTA0NTY5OTQyZjFlZGY1NTllOTY5ZDE2NzU5ODUyNWFiMzYxY2E"
+                            <img src="/medias/celulares.jpg?context=bWFzdGVyfHJvb3R8Mjc2M3xpbWFnZS9qcGVnfGhiNy9oMWIvMTIzNjM1NDM3NDA0NDYuanBnfGY0MDVjYWFkNTZlZGM1MTlkYTZiZWEyZjkzYTA1MGZiZDVhMjlmYjk4ZGYzZDliZjcxODFkNTI0MjUwYzhkYTY"
                                 alt="Celulares">
                         </div>
                         Celulares
@@ -634,6 +716,8 @@
                         Electro
                     </div>
                 </a>
+
+
                 <a href="/audio/c/BI_AUDI_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
@@ -664,7 +748,7 @@
                 <a href="/smartwatch/c/BI_SMAW_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
-                            <img src="/medias/relojes.jpg?context=bWFzdGVyfHJvb3R8MzMxM3xpbWFnZS9qcGVnfGg1YS9oNWMvMTIzNTk1MzQ1NzU2NDYuanBnfDAzODkwY2IzMGM1M2Y4YzA4Y2NkN2JlOWIzOGMyNWFjMGU0NTY2NTUwZGMzNWYzODczZjk3MGRiZmMzZmQ4ZWU"
+                            <img src="/medias/reloj-izq.jpg?context=bWFzdGVyfHJvb3R8MzQwOHxpbWFnZS9qcGVnfGg1YS9oZDIvMTIzNjM1Nzk0NTc1NjYuanBnfGU0YTEzNzM3YWQxNzdkNWVmYTAyNTgwYTMyZDU1NTVmZTVjZTE1M2RkMDY2YjhmM2Y4ZDU1Y2UyNmNhMmU2M2E"
                                 alt="Smartwatch">
                         </div>
                         Smartwatch
@@ -673,7 +757,7 @@
                 <a href="/computadores-tablets/tablets-ipads/c/BI_107_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
-                            <img src="/medias/tablet.jpg?context=bWFzdGVyfHJvb3R8MjgyOXxpbWFnZS9qcGVnfGg3NS9oNDYvMTIzNTk1MzQ5MDMzMjYuanBnfDg2ZmFkZWEyYWIyZWY1OTI0YWFjMzM2YmQ2Y2E3OGQyY2JjZDg2YzkyNGMwNjc0ODBmZGI4ZTQ0NjdjNTY0MGY"
+                            <img src="/medias/tablet.jpg?context=bWFzdGVyfHJvb3R8NDAwNHxpbWFnZS9qcGVnfGgyYS9oYjkvMTIzNjM1NDQzNjMwMzguanBnfDVmMWUxMTY5OTc1NTVjZDQwYTA3ZWIyMzlkNmYyZmFhYWNjN2I2M2EyMGI3ZGEwYjQ1OTg0YWNmZDZmMzkzMDI"
                                 alt="Tabletas">
                         </div>
                         Tabletas
@@ -682,7 +766,7 @@
                 <a href="/hogar/c/BI_HOGA_ALKOS">
                     <div class="k-grid-items-category">
                         <div class="k-product-contenedor">
-                            <img src="/medias/hogar.jpg?context=bWFzdGVyfHJvb3R8MTg1N3xpbWFnZS9qcGVnfGg1Mi9oYzUvMTIzNTk1MzMxOTkzOTAuanBnfGFjMTZiYTc0NTM4Y2M5YTNiYjBkMDM1ZTU3MGEyMjk2ODZiYWFkMDQzYjRhZTM4ODU1ZjNlYTgwM2Y5ZjQ2NmQ"
+                            <img src="/medias/Hogar.jpg?context=bWFzdGVyfHJvb3R8NDM2N3xpbWFnZS9qcGVnfGg2Mi9oZjQvMTIzNzA3MDQwMzk5NjYuanBnfDA3MzhiNTIzYzhiMGM5OTZmZDA1ODY1Y2ZhNzZlMGU1MDBiY2E4YWJjMTVmOWYwN2U3OWVkMGRjYmMwOWE5MjI"
                                 alt="Hogar">
                         </div>
                         Hogar
@@ -1051,7 +1135,7 @@
         </div>
     </div>
 </div>
-<div class="home-ak-contenedor ak-mob-sep">
+<div class="home-ak-contenedor ak-mob-sep alto-mob">
     <k-title-underline type="center">
         <h3>Ofertas con Bancos</h3>
     </k-title-underline>
