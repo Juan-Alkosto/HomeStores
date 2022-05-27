@@ -1,0 +1,516 @@
+<style>
+    .alk-contenedor {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .banner-principal-alk {
+        width: 74%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50px !important;
+        background: var(--alert-background-color) !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    .alk-credito-20minutos {
+        width: 310px;
+        margin-left: 16px;
+        display: inline-block;
+        vertical-align: top;
+        -webkit-box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 16%);
+        border-radius: 8px;
+    }
+
+    .alk-credito-20minutos h1 {
+        margin: 0;
+        font-size: 22px;
+        color: var(--primary-color1) !important;
+        width: 70%;
+        margin-left: 16px !important;
+    }
+
+    .alk-credito-20minutos .titulo {
+        padding: 16px;
+    }
+
+    .alk-credito-20minutos .titulo img,
+    .alk-credito-20minutos .titulo h1 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .alk-credito-20minutos .servicios li {
+        padding: 16px;
+        border-top: dashed 1px var(--text-color3);
+    }
+
+    .servicios .alk-icon-pedido-realizado,
+    .servicios .alk-icon-realiza-pago {
+        font-size: 40px;
+        float: left;
+        margin: 0 26px 0 16px;
+        color: var(--primary-color1);
+    }
+
+    .alk-credito-20minutos .cta {
+        background: #c20d19;
+        padding: 8px;
+        text-align: right;
+        color: white;
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .alk-credito-20minutos .servicios .alk-icon-derecha {
+        font-size: 17px;
+        margin-bottom: 0;
+        line-height: 0;
+        position: relative;
+        top: 3px;
+        right: 0;
+        color: var(--primary-color1);
+    }
+
+    .servicios li a,
+    .servicios li a:hover {
+        color: var(--text-color3);
+    }
+
+    .servicios li strong {
+        color: var(--text-color1);
+    }
+
+    .cta a,
+    .cta a:hover {
+        color: var(--alert-background-color);
+    }
+
+    .alk-margin-bottom {
+        margin-bottom: 32px;
+    }
+
+    .alk-mancheta {
+        text-align: center;
+        border-bottom: solid 1px #C9C9C9;
+        height: 25px;
+        margin-bottom: 24px;
+    }
+
+    .alk-mancheta h3 {
+        font-size: 16px;
+        padding: 0 8px 4px;
+        border-bottom: solid 2px var(--primary-color1);
+        color: var(--text-color1);
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+        top: 1px;
+    }
+
+    .alk-container-items-category {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: 116px;
+        grid-gap: 16px;
+    }
+
+    .alk-grid-items-category {
+        cursor: pointer;
+        color: var(--primary-color1);
+        text-align: center;
+        font-size: 14px;
+        -webkit-box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 16%);
+        border-radius: 8px;
+        padding: 8px;
+        transition: transform .4s;
+    }
+
+    .k-product-contenedor img {
+        height: 74px;
+        margin-bottom: 8px;
+        transition: transform .4s;
+    }
+
+    .k-product-contenedor:hover {
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -webkit-transform: scale(1.1);
+        /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+
+    .k-grid-items-category.ofertas {
+        color: var(--primary-color1) !important;
+    }
+
+    .alk-grid-items-category.ofertas {
+        border: solid 1px var(--primary-color1) !important;
+        box-shadow: none;
+        background: rgba(235, 91, 37, 0.1);
+    }
+
+    .k-product-contenedor .ico-font {
+        font-size: 62px;
+        line-height: 80px;
+    }
+
+    .alk-fondo-gris {
+        background: #F5F5F5;
+    }
+
+    .alk-fondo-gris .alk-contenedor {
+        padding: 24px 0;
+    }
+
+
+    .alk-container-items-banner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px;
+    }
+
+    .alk-grid-items-banner {
+        cursor: pointer;
+        text-align: center;
+        height: 416px;
+    }
+</style>
+
+<div class="alk-contenedor alk-margin-bottom">
+    <div class="banner-principal-alk">
+        <div class="col-xs-12 col-md-12 no-padding component__banner">
+            <div class="carousel__rotativeBanner">
+                <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                    <div class="banner-adglare">
+                        <!-- AdGlare: ALKP_HOME_banner-prin-P1 -->
+                        <span id=zone408471973></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?408471973');
+                        </script>
+                    </div>
+                    <div class="banner-adglare">
+                        <!-- AdGlare: ALKP_HOME_banner-prin-P2 -->
+                        <span id=zone391192032></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?391192032');
+                        </script>
+                    </div>
+                    <div class="banner-adglare">
+                        <!-- AdGlare: ALKP_HOME_banner-prin-P3 -->
+                        <span id=zone417225086></span>
+                        <script>
+                            (function (r, d, u) {
+                                var s = d.createElement(r); s.async = true;
+                                u += '&cb=' + Date.now() + Math.random();
+                                s.src = u; var n = d.getElementsByTagName(r)[0];
+                                n.parentNode.insertBefore(s, n);
+                            })('script', document, '//engine.alkst.co/?417225086');
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alk-credito-20minutos">
+        <div class="titulo">
+            <img src="/medias/Picture2.png?context=bWFzdGVyfHJvb3R8ODA5MXxpbWFnZS9wbmd8aDA4L2g3MS8xMjQ0MTY4MzcyMjI3MC5wbmd8ZGU0MWNiOTliYzY4NWJkOTc5N2JlODkzYTZmMWUyMDdhMWJjZGMzZTk4NGE1YTljY2RkNGZjYWUzYWU1MThlOQ"
+                alt="Crédito 20 minutos" />
+            <h1>Crédito 20 minutos</h1>
+        </div>
+        <ul class="servicios">
+            <li>
+                <a href="https://www.credito20minutos.com/solicitar-credito/" target="_blank">
+                    <i class="ico-font alk-icon-pedido-realizado"></i><strong>Solicítalo ahora</strong><br />Registra
+                    tus datos y en breve obtendrás respuesta<i class="ico-font alk-icon-derecha"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pagos.alkomprar.com/" target="_blank"><i
+                        class="ico-font alk-icon-realiza-pago"></i><strong>Paga tus cuotas</strong><br />Ingresa y paga
+                    desde la comodidad de tu dispositivo<i class="ico-font alk-icon-derecha"></i></a>
+            </li>
+        </ul>
+        <div class="cta">
+            <a href="https://www.credito20minutos.com/solicitar-credito/" target="_blank">
+                Conoce más <i class="ico-font alk-icon-derecha"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="alk-contenedor alk-margin-bottom">
+    <div class="alk-mancheta">
+        <h3>Nuestras categorías</h3>
+    </div>
+    <div class="alk-container-items-category">
+        <a href="/celulares/c/BI_CELU">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/celulares.jpg?context=bWFzdGVyfHJvb3R8Mjc2M3xpbWFnZS9qcGVnfGhiNy9oMWIvMTIzNjM1NDM3NDA0NDYuanBnfGY0MDVjYWFkNTZlZGM1MTlkYTZiZWEyZjkzYTA1MGZiZDVhMjlmYjk4ZGYzZDliZjcxODFkNTI0MjUwYzhkYTY"
+                        alt="Celulares">
+                </div>
+                Celulares
+            </div>
+        </a>
+        <a href="/computadores-tablets/c/BI_COMP">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/computador.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gxOS9oMWQvMTE0MjM1NjYzMzE5MzQucG5nfGJjODA1NjBkYTljZmM0N2VkNWZiMzYzNzU3N2UxNzBhNWM4OTBlODJkN2EzNmNkZDhjOGE4MjVjODc2YmYwZDA"
+                        alt="Computadores">
+                </div>
+                Computadores
+            </div>
+        </a>
+        <a href="/tv-video/c/BI_TVVI">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/televisor.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ1Nzl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Zi9oMDcvMTE0MjM1NjIzMDE0NzAucG5nfDQ0YWQ4YmZhZmMwMGMyZTljZTQzN2UyNmQwNTc0NDAyMDcxMjdhMGIwZGQ3ZjAxNDllNDUwZmM4NmEwNzI5YmM"
+                        alt="Televisores">
+                </div>
+                Televisores
+            </div>
+        </a>
+        <a href="/audio/c/BI_AUDI">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/audio.jpg?context=bWFzdGVyfHJvb3R8MjMwOHxpbWFnZS9qcGVnfGg2OC9oYWEvMTIzNTk1MzA5NzExNjYuanBnfGU3MzBkYjEzOGM1MThiMDg4MDIzMTVkMDYxZDQyMTJjYTQyMjRhNDYwMWI1YjJlZTBmZDZhMjE2OTNjOGIzOTA"
+                        alt="Audio">
+                </div>
+                Audio
+            </div>
+        </a>
+        <a href="/electrodomesticos/c/BI_ELHO">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/electro.jpg?context=bWFzdGVyfHJvb3R8MTU5MHxpbWFnZS9qcGVnfGgxMy9oOTgvMTIzNTk1MzIzODAxOTAuanBnfGRjMzc3NDE4NzBkMzhlOGRiZWE2ZWYzNDYwODc1YWNkZDM3MGEzNGVlNzdiZTUzMGM1OWE5ZjI2ZWM1NWNkYWY"
+                        alt="Electro">
+                </div>
+                Electrodomésticos
+            </div>
+        </a>
+
+
+
+        <a href="/videojuegos/c/BI_VIJU">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/videojuegos.jpg?context=bWFzdGVyfHJvb3R8MjQxMHxpbWFnZS9qcGVnfGg2YS9oYzcvMTIzNTk1MzUxNjU0NzAuanBnfDhmNWVlOTcxZWJiMWJhMGVmM2VjNjUzZWNkNzU3NWQ5MDEzN2ZhMDU0YzE1MTc3ODJlODE0MzIzN2ViZTNiZGY"
+                        alt="Videojuegos">
+                </div>
+                Videojuegos
+            </div>
+        </a>
+
+        <a href="/camaras/c/BI_CAMA">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/MicrosoftTeams-image-5-.png?context=bWFzdGVyfGltZy1wYWdpbmFzLWVycm9yLTUwMHwyNjQ1fGltYWdlL3BuZ3xpbWctcGFnaW5hcy1lcnJvci01MDAvaGRlL2g1MS8xMjQxNDExOTQxMTc0Mi5wbmd8NzBmZDMwM2E5M2Q0NzU0ZDlhNTRhMzA1MGMzNDcyYjkyMzVhY2JhY2ZlNDNjNGVkNzFiODQxOGI0NTMxYWMzYw"
+                        alt="Cámaras">
+                </div>
+                Cámaras
+            </div>
+        </a>
+
+        <a href="/casa-inteligente-domotica/c/BI_CAIN">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/casa-inteligente.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNjJ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3MC9oYzMvMTE0NDU0MzA1ODMzMjYucG5nfGE2NzMxZjllNTA0OGNkOTFhNTAxMGNlMzg2ZTg2NWZjMDg3NWNiYmU1ZDlhZWJiNWRkYjQ1YjZmZGNhOTdiY2E"
+                        alt="Casa Inteligente">
+                </div>
+                Casa Inteligente
+            </div>
+        </a>
+
+        <a href="/accesorios-electronica/c/BI_AELE_ALKOS">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/accesorios.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMyODh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gzNy9oNWMvMTE2NzE4MzY5NTA1NTgucG5nfDJlNTIxZjdmZWI1NzY1ODRhNmY5ZmM3YjE3Y2UwMTc3YjNjZjBhMWUwMDQ5NzdjMGI4YzExMjJiMjdiYjVmYWE"
+                        alt="Accesorios">
+                </div>
+                Accesorios
+            </div>
+        </a>
+
+        <a href="/hogar/c/hogar">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/muebles.jpg?context=bWFzdGVyfHJvb3R8MTc2NXxpbWFnZS9qcGVnfGg1OC9oYzIvMTIzNTk1MzQxMTY4OTQuanBnfDJiNDMzODU5YzA2ZTdiZmQ2ODU4MWY2N2M4MjM5YWEwZDAwYjA5ODI4YjNkM2FlY2FjZjk5MmNhNWE1Y2Q1NmE"
+                        alt="Hogar">
+                </div>
+                Hogar
+            </div>
+        </a>
+
+        <a href="/pines-virtuales/c/pines-virtuales">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/MicrosoftTeams-image-2-.png?context=bWFzdGVyfGltZy1wYWdpbmFzLWVycm9yLTUwMHwyMjkwfGltYWdlL3BuZ3xpbWctcGFnaW5hcy1lcnJvci01MDAvaDk2L2g4Zi8xMjQwODM4Nzc5NzAyMi5wbmd8MjQ0YTNhYjE1ZWE2NjcxZDEyYzAxMzRkOGVhMWFiMTZhNjE4M2IzYjBkMzZjZjUzMjU5MGMxMTY3NTExYjM3Mg"
+                        alt="Netflix y Pines">
+                </div>
+                Netflix y Pines
+            </div>
+        </a>
+
+        <a href="/llantas/c/llantas">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/llanta.jpg?context=bWFzdGVyfHJvb3R8MjUwM3xpbWFnZS9qcGVnfGgxMi9oZmYvMTIzNTk1MzM3ODkyMTQuanBnfDJiZjU5ZDdkMDZlZDY3YWZjN2YzMWVmZmZhYTEzNTUyYmUzY2YwMWI4MWQ1NGUwYjdhNjFlMjQ1OGVhMDhmYzM"
+                        alt="Llantas">
+                </div>
+                Llantas
+            </div>
+        </a>
+
+        <a href="/deportes/c/BI_DEPO_ALKOS">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/deportes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzY2fGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oZTEvaDFkLzExNjg1MTQ1MDE4Mzk4LnBuZ3xhOGUwNDliNTE0OWRmYmMxZWQzNDJmMWUyZWMyMmJkN2IyZmYwNzZhYWMxODM3MGQ1MDQyNmQwNjk0N2IwN2E2"
+                        alt="Deportes">
+                </div>
+                Deportes
+            </div>
+        </a>
+
+
+        <a href="/smartwatch/c/BI_SMAW">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/reloj-izq.jpg?context=bWFzdGVyfHJvb3R8MzQwOHxpbWFnZS9qcGVnfGg1YS9oZDIvMTIzNjM1Nzk0NTc1NjYuanBnfGU0YTEzNzM3YWQxNzdkNWVmYTAyNTgwYTMyZDU1NTVmZTVjZTE1M2RkMDY2YjhmM2Y4ZDU1Y2UyNmNhMmU2M2E"
+                        alt="Smartwatch">
+                </div>
+                Smartwatch
+            </div>
+        </a>
+        <a href="/computadores-tablets/tablets-ipads/c/BI_107">
+            <div class="alk-grid-items-category">
+                <div class="k-product-contenedor">
+                    <img src="/medias/tablet.jpg?context=bWFzdGVyfHJvb3R8NDAwNHxpbWFnZS9qcGVnfGgyYS9oYjkvMTIzNjM1NDQzNjMwMzguanBnfDVmMWUxMTY5OTc1NTVjZDQwYTA3ZWIyMzlkNmYyZmFhYWNjN2I2M2EyMGI3ZGEwYjQ1OTg0YWNmZDZmMzkzMDI"
+                        alt="Tabletas">
+                </div>
+                Tabletas
+            </div>
+        </a>
+
+        <a href="/ofertas">
+            <div class="alk-grid-items-category ofertas">
+                <div class="k-product-contenedor">
+                    <i class="ico-font alk-icon-offers"></i>
+                </div>
+                Ofertas
+            </div>
+        </a>
+    </div>
+</div>
+<div class="alk-fondo-gris  alk-margin-bottom">
+    <div class="alk-contenedor">
+        <div class="alk-mancheta">
+            <h3>Ofertas Destacadas</h3>
+        </div>
+        <div class="alk-container-items-banner">
+            <div class="alk-grid-items-banner">
+                <!-- AdGlare: Banner-Ofertas-Lokura-ALKOMPRAR-01 -->
+                <span id=zone322385466></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?322385466');
+                </script>
+            </div>
+            <div class="alk-grid-items-banner">
+                <!-- AdGlare: Banner-Ofertas-Lokura-ALKOMPRAR-02 -->
+                <span id=zone609114802></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?609114802');
+                </script>
+            </div>
+            <div class="alk-grid-items-banner">
+                <!-- AdGlare: Banner-Ofertas-Lokura-ALKOMPRAR-03 -->
+                <span id=zone532678157></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?532678157');
+                </script>
+            </div>
+            <div class="alk-grid-items-banner">
+                <!-- AdGlare: Banner-Ofertas-Lokura-ALKOMPRAR-04 -->
+                <span id=zone112236902></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?112236902');
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="alk-contenedor alk-margin-bottom">
+    <div class="alk-mancheta">
+        <h3>En Alkomprar puedes...</h3>
+    </div>
+
+</div>
+
+
+
+<div class="alk-fondo-gris  alk-margin-bottom">
+    <div class="alk-contenedor">
+        <div class="alk-mancheta">
+            <h3>Celulares</h3>
+        </div>
+    </div>
+</div>
