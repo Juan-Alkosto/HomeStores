@@ -280,17 +280,59 @@
     }
 
     @media screen and (max-width: 1024px) {
-
-        .ak-banner-cont-derecha {
-            width: 880px;
-        }
-
-        .ak-grid-items-vitr {
-            width: 294px;
+        .home-ak-contenedor .contenedor-categorias {
+            width: 100%;
+            margin: 0 0 32px;
         }
 
         .ak-grid-items-category {
-            grid-gap: 16px 24px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-gap: 16px 28px;
+        }
+
+        .home-ak-contenedor .banner-principal-ak {
+            width: 100%;
+        }
+
+        .contenedor-categorias .ak-ocultar-mob{
+            display: block;
+        }
+
+        .carousel__rotativeBanner .banner-adglare {
+            width: 100%;
+            text-align: center;
+        }
+
+        .ak-grid-items-destacado {
+            cursor: pointer;
+            color: var(--primary-color2);
+            text-align: center;
+            height: 315px;
+            overflow: hidden;
+        }
+
+        .ak-grilla-tres-banner {
+            cursor: pointer;
+            width: auto;
+            margin-bottom: 40px;
+            margin-top: 16px;
+            height: 348px;
+            overflow: hidden;
+        }
+
+        .ak-elemento {
+            font-size: 12px;
+        }
+        .ak-grid-items-perder {
+            grid-template-columns: repeat(4, 24%);
+            grid-gap: 12px;
+        }
+
+        .ak-grid-items-perd {
+            cursor: pointer;
+            width: auto;
+            height: 210px;
         }
 
     }
