@@ -295,7 +295,7 @@
             width: 100%;
         }
 
-        .contenedor-categorias .ak-ocultar-mob{
+        .contenedor-categorias .ak-ocultar-mob {
             display: block;
         }
 
@@ -324,6 +324,7 @@
         .ak-elemento {
             font-size: 12px;
         }
+
         .ak-grid-items-perder {
             grid-template-columns: repeat(4, 24%);
             grid-gap: 12px;
@@ -344,7 +345,7 @@
             width: 260px;
             margin-bottom: 40px;
             margin-top: 16px;
-            height: 278px;
+            height: 280px;
             overflow: hidden;
         }
 
@@ -356,6 +357,11 @@
         .page-homepage .carousel__rotativeBanner .owl-stage-outer,
         .page-homepage .carousel__rotativeBanner .rotativeBanner {
             min-height: 414px !important;
+        }
+
+        .ak-grid-items-perder {
+            grid-template-columns: repeat(4, 68%);
+            grid-gap: 16px;
         }
 
         .ak-grid-items-banco {
@@ -550,14 +556,18 @@
 
         .ak-grid-items-perd {
             cursor: pointer;
-            width: 308px;
-            height: 276px;
+            width: auto;
+            height: auto;
             margin-top: 8px;
         }
 
         .alto-mob {
             margin-top: 24px;
         }
+
+        .ak-grid-items-destacado {
+    height: 408px;
+}
 
     }
 
@@ -567,6 +577,13 @@
             margin-top: 36px;
         }
     }
+
+    @media screen and (max-width: 393px) {
+
+        .home-ak-contenedor .carousel__rotativeBanner .owl-carousel .owl-dots {
+    margin-top: -56px;
+}
+    }    
 
     @media screen and (max-width: 384px) {
 
@@ -1319,19 +1336,19 @@
     </div>
 </div>
 <div class="home-ak-contenedor ak-mob-sep alto-mob">
-    
-        <!-- AdGlare: AK-Home-Tit-Bancos -->
-        <span id=zone786276088></span>
-        <script>
-            (function (r, d, u) {
-                var s = d.createElement(r); s.async = true;
-                u += '&cb=' + Date.now() + Math.random();
-                s.src = u; var n = d.getElementsByTagName(r)[0];
-                n.parentNode.insertBefore(s, n);
-            })('script', document, '//engine.alkst.co/?786276088');
-        </script>
 
-    
+    <!-- AdGlare: AK-Home-Tit-Bancos -->
+    <span id=zone786276088></span>
+    <script>
+        (function (r, d, u) {
+            var s = d.createElement(r); s.async = true;
+            u += '&cb=' + Date.now() + Math.random();
+            s.src = u; var n = d.getElementsByTagName(r)[0];
+            n.parentNode.insertBefore(s, n);
+        })('script', document, '//engine.alkst.co/?786276088');
+    </script>
+
+
     <div class="scroll-mobile-grid">
         <div class="ak-grid-items-bancos">
             <div class="ak-grid-items-banco">
