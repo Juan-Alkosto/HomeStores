@@ -59,6 +59,35 @@
         font-size: 14px;
     }
 
+    .k-product-contenedor {
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        line-height: 95px;
+        background: var(--alert-background-color);
+        margin: 0 auto 8px auto;
+        text-align: center;
+        transition: transform .4s;
+        -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    .k-product-contenedor img {
+        padding: 10px;
+        width: 81%;
+        position: relative;
+        top: 6px;
+    }
+
+    .k-product-contenedor:hover {
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -webkit-transform: scale(1.1);
+        /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+
     .home-ak-contenedor .owl-carousel .owl-nav button.owl-next:before,
     .home-ak-contenedor .owl-carousel .owl-nav button.owl-prev:before {
         color: var(--primary-color1) !important;
@@ -212,6 +241,8 @@
         display: none;
     }
 
+    
+
     .ak-banner-mas-vendido {
         display: inline-block;
         height: 271px;
@@ -251,23 +282,59 @@
         margin: 0 auto 40px;
     }
 
-    .alk-mancheta {
-        text-align: center;
-        border-bottom: solid 1px #e0e0e0;
-        height: 25px;
-        margin-bottom: 16px;
-        margin-top: 32px;
-    }
+    @media screen and (max-width: 1280px) {
 
-    .alk-mancheta h3 {
-        font-size: 16px;
-        padding: 0 8px 4px;
-        border-bottom: solid 2px var(--primary-color1);
-        color: var(--primary-color2);
-        width: fit-content;
-        margin: 0 auto;
-        position: relative;
-        top: 1px;
+        .scroll-mobile-grid {
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .ak-banner-cont-derecha {
+            width: 880px;
+        }
+
+        .ak-grid-items-vitr {
+            width: 294px;
+        }
+
+        .ak-grid-items-category {
+            grid-gap: 16px 24px;
+        }
+
+        ak-grilla-tres-banner {
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .home-ak-contenedor .contenedor-categorias {
+            width: 40%;
+        }
+
+        .ak-grid-items-category {
+            display: grid;
+            grid-template-columns: repeat(5, 41%);
+            grid-gap: 16px 32px;
+        }
+
+        .ak-grilla-tres-banner {
+            cursor: pointer;
+            width: auto;
+            margin-bottom: 40px;
+            margin-top: 16px;
+            height: 430px;
+            overflow: hidden;
+        }
+
+        .ak-grid-items-category {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 16px 19px;
+        }
+
     }
 
     @media screen and (max-width: 1024px) {
@@ -303,6 +370,10 @@
             overflow: hidden;
         }
 
+        .ak-elementos-connfianza {
+            padding-top: 10px;
+        }
+
         .ak-grilla-tres-banner {
             cursor: pointer;
             width: auto;
@@ -316,27 +387,20 @@
             font-size: 12px;
         }
 
-        .ak-grid-items-perder {
-            grid-template-columns: repeat(4, 24%);
-            grid-gap: 12px;
-        }
-
-        .ak-grid-items-perd {
-            cursor: pointer;
-            width: auto;
-            height: 210px;
-        }
-
     }
 
     @media screen and (max-width: 540px) {
+
+        .ak-ocultar-desktop {
+        display: none;
+    }
 
         .ak-grilla-tres-banner {
             cursor: pointer;
             width: 260px;
             margin-bottom: 40px;
             margin-top: 16px;
-            height: 280px;
+            height: 278px;
             overflow: hidden;
         }
 
@@ -348,11 +412,6 @@
         .page-homepage .carousel__rotativeBanner .owl-stage-outer,
         .page-homepage .carousel__rotativeBanner .rotativeBanner {
             min-height: 414px !important;
-        }
-
-        .ak-grid-items-perder {
-            grid-template-columns: repeat(4, 68%);
-            grid-gap: 16px;
         }
 
         .ak-grid-items-banco {
@@ -436,13 +495,15 @@
             padding-left: 16px;
         }
 
-        .scroll-mobile-grid {
-            overflow-x: auto;
-            overflow-y: hidden;
-            position: relative;
-            z-index: 2;
-            width: 100%;
+        .ak-grid-items-destacado {
+            height: 422px;
         }
+
+        .ak-grilla-tres-banners {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+
 
         .ak-fondo-gris {
             background: var(--button-primary-background-color-disabled);
@@ -547,17 +608,13 @@
 
         .ak-grid-items-perd {
             cursor: pointer;
-            width: auto;
-            height: auto;
+            width: 308px;
+            height: 276px;
             margin-top: 8px;
         }
 
         .alto-mob {
             margin-top: 24px;
-        }
-
-        .ak-grid-items-destacado {
-            height: 408px;
         }
 
     }
@@ -566,13 +623,6 @@
 
         .ak-grid-items-vitrina {
             margin-top: 36px;
-        }
-    }
-
-    @media screen and (max-width: 393px) {
-
-        .home-ak-contenedor .carousel__rotativeBanner .owl-carousel .owl-dots {
-            margin-top: -15%;
         }
     }
 
@@ -628,18 +678,24 @@
             padding-left: 0;
             padding-right: 0;
         }
+
+        .k-product-contenedor {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .k-product-contenedor img {
+            width: 70px;
+        }
     }
 
 
-
-    .breadcrumb-section {
-        display: none !important;
-    }
 
     .k-contenedor-iva {
         width: 100%;
         margin: -16px auto 0;
-        background: url(/medias/fondo-ak-alkosto.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDE0ODgzfGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oZWMvaGI4LzExNjg1MTM1NjQ2NzUwLnBuZ3xiMGQzYzU3MjlmNDc1NWNkOTU0OWMyNzkxYjExMWQ3NTU1ZjhjNmJkNTg3M2UxNWMyMjRkNjlmMGQ4Yjk2YmY0);
+        background: url(/medias/fondo-kt-iva-2022.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDcyNTEyfGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oOTcvaDZiLzExNjcxNzUyNzM2Nzk4LnBuZ3xlNzFhZWM4YzZhZDk4MzhkMjdkNTE0YzMyZjY4MmJhMjFmNDJkZjVmNDk0NTA0MWVlNjk4MTNjOWU4NWQ3ZmY3);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 0;
@@ -713,7 +769,7 @@
 
     .k-grid-container-category {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         grid-gap: 24px 40px;
         padding-bottom: 43px;
     }
@@ -729,12 +785,11 @@
         width: 114px;
         height: 114px;
         border-radius: 50%;
-        border: solid 1px var(--primary-color1);
+        border: solid 1px #02A3DC;
         background: var(--alert-background-color);
         margin: 0 auto 8px auto;
         text-align: center;
         transition: transform .4s;
-        line-height: 111px;
     }
 
     .k-product-contenedor:hover {
@@ -782,7 +837,7 @@
     }
 
     .k-titulo-elementos {
-        color: var(--primary-color1);
+        color: var(--primary-color2);
         font-size: 16px;
         font-weight: 700;
         line-height: normal;
@@ -907,11 +962,6 @@
             border-bottom: none;
             padding-bottom: 0;
         }
-
-        .k-product-contenedor img {
-            width: 87%;
-        }
-
     }
 
     @media (max-width: 360px) {
@@ -941,29 +991,28 @@
 <div class="ak-ocultar-mob">
     <div class="ak-elementos-confianza-mob">
         <div class="ak-elemento">
-            <!-- AdGlare: AK-HOME-elementos de confianza -->
-            <span id=zone865005877></span>
+            <!-- AdGlare: KT-HOME-elementos de confianza (2) -->
+            <span id=zone568781884></span>
             <script>
                 (function (r, d, u) {
                     var s = d.createElement(r); s.async = true;
                     u += '&cb=' + Date.now() + Math.random();
                     s.src = u; var n = d.getElementsByTagName(r)[0];
                     n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?865005877');
+                })('script', document, '//engine.alkst.co/?568781884');
             </script>
         </div>
     </div>
 </div>
 
 
-
 <div class="k-contenedor-iva">
     <div class="k-contenedor-elementos borde-inferior">
         <div class="k-colum-5 luz-izq">
             <img class="k-logo-desktop"
-                src="/medias/logo-ak.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxMTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hjYy9oMDEvMTE2OTMxNDA1NzQyMzgucG5nfGU3N2E3ZTJiNDdkNzA4YzVmMjgxNzdhZTI1MTIzZTljZWIxMTE1ZjZkNjI3M2I2YTI1NGQ1ZWZkNjg1NmNhY2Y" />
+                src="/medias/logo-kt.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQwODV8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g4OC9oYTMvMTE2OTMwNjUzMDYxNDIucG5nfDE5MWFmMGFiNmE3ZTk2MTZlY2JkY2FhOGFlNWNjNTJmYjU0NmVhNGM0ZGJlOWMxNmU3MzE4M2I2NzUxMzQwYjI" />
             <img class="k-logo-mobile"
-                src="/medias/logo-ak.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxMTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hjYy9oMDEvMTE2OTMxNDA1NzQyMzgucG5nfGU3N2E3ZTJiNDdkNzA4YzVmMjgxNzdhZTI1MTIzZTljZWIxMTE1ZjZkNjI3M2I2YTI1NGQ1ZWZkNjg1NmNhY2Y" />
+                src="/medias/logo-kt.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQwODV8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g4OC9oYTMvMTE2OTMwNjUzMDYxNDIucG5nfDE5MWFmMGFiNmE3ZTk2MTZlY2JkY2FhOGFlNWNjNTJmYjU0NmVhNGM0ZGJlOWMxNmU3MzE4M2I2NzUxMzQwYjI" />
         </div>
         <div class="k-colum-5 luz-der">
             <div class="k-titulo-iva">Computadores, Celulares, <br />
@@ -979,120 +1028,124 @@
     <div class="k-contenedor-elementos">
         <div class="k-categorias-mobile-titulo">Navega las ofertas por categoría:</div>
         <div class="k-grid-container-category">
-            <a href="/celulares/telefonos-celulares/c/BI_101_ALKOS">
+            <a href="/celulares/telefonos-celulares/c/BI_101_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Celulares"
                             src="/medias/celular.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM4MTd8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hkNS9oMWQvMTE0MjQ4NDIxNTQwMTQucG5nfGZkNjY0ODMxOTAxZjUyZDk5YjU5MzFiMGU5YjIyNzJjZDFiNTE3Y2Y1NTRkNDlhYWQ4YWM3MTU4NGQwNDM2M2Q" />
                     </div>
                     Celulares
                 </div>
             </a>
 
-            <a href="/computadores-tablet/c/BI_COMP_ALKOS">
+            <a href="/computadores-tablet/c/BI_COMP_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Computadores"
                             src="/medias/computador.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMxNTZ8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gxOS9oMWQvMTE0MjM1NjYzMzE5MzQucG5nfGJjODA1NjBkYTljZmM0N2VkNWZiMzYzNzU3N2UxNzBhNWM4OTBlODJkN2EzNmNkZDhjOGE4MjVjODc2YmYwZDA" />
                     </div>
                     Computadores
                 </div>
             </a>
 
-            <a href="/tv-video/televisores/c/BI_120_ALKOS">
+            <a href="/tv-video/televisores/c/BI_120_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Televisores"
                             src="/medias/televisor.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ1Nzl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Zi9oMDcvMTE0MjM1NjIzMDE0NzAucG5nfDQ0YWQ4YmZhZmMwMGMyZTljZTQzN2UyNmQwNTc0NDAyMDcxMjdhMGIwZGQ3ZjAxNDllNDUwZmM4NmEwNzI5YmM" />
                     </div>
                     Televisores
                 </div>
             </a>
 
-            <a href="/electrodomesticos/c/BI_ELHO_ALKOS">
+            <a href="/electrodomesticos/c/BI_ELHO_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Electrodomésticos"
                             src="/medias/estufa.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDc0Njh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hjNC9oODAvMTE2ODUxNDIyMDAzNTAucG5nfDI2NjVkMjMzYWUzNGJhNTQ2ZmEzMTZiNjMzYThlOWE3Y2U4OTM5YWUwYzhhM2FiZjY0NmNkNjEyODFiMjZjMGU" />
                     </div>
                     Electrodomésticos
                 </div>
             </a>
 
-            <a href="/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_ALKOS">
+
+
+            <a href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
-                            src="/medias/electro-menores.jpg?context=bWFzdGVyfHJvb3R8MjEyOHxpbWFnZS9qcGVnfGg1Ny9oNmEvMTI2NzY5ODU1NTI5MjYuanBnfGQ2YzY2OTMzZTRjMmYxYjZhZjIyNjNlZGY5Y2U5OWI3Yzc1Mzg3MWY4NzM4ZDljYWYwNmVlOTBlYmU0YTE5MTE" />
+                        <img alt="Electromenores"
+                            src="https://www.alkosto.com/medias/electro-menores.jpg?context=bWFzdGVyfHJvb3R8MjEyOHxpbWFnZS9qcGVnfGg1Ny9oNmEvMTI2NzY5ODU1NTI5MjYuanBnfGQ2YzY2OTMzZTRjMmYxYjZhZjIyNjNlZGY5Y2U5OWI3Yzc1Mzg3MWY4NzM4ZDljYWYwNmVlOTBlYmU0YTE5MTE" />
                     </div>
                     Electromenores
                 </div>
             </a>
 
-            <a href="/audio/audio-hogar/c/BI_112_ALKOS">
+            <a href="/audio/audio-hogar/c/BI_112_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Audio"
                             src="/medias/parlantes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMwNTR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2My9oMzAvMTE0MjM1NzkzMDgwNjIucG5nfDM0OTQzNWVhMmZkNzMwMTI3M2RhNTVjY2YyOTYwMDM5YzY3ZGNmNzY0MTU2YTlhYThlOGZlNDU3ZmYyMjYxYzE" />
                     </div>
                     Audio
                 </div>
             </a>
 
-            <a href="/accesorios-electronica/c/BI_AELE_ALKOS">
+            <a href="/accesorios-electronica/c/BI_AELE_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Accesorios"
                             src="/medias/accesorios.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMyODh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2gzNy9oNWMvMTE2NzE4MzY5NTA1NTgucG5nfDJlNTIxZjdmZWI1NzY1ODRhNmY5ZmM3YjE3Y2UwMTc3YjNjZjBhMWUwMDQ5NzdjMGI4YzExMjJiMjdiYjVmYWE" />
                     </div>
                     Accesorios
                 </div>
             </a>
 
-            <a href="/videojuegos/juegos/c/BI_132_ALKOS">
-                <div class="k-grid-items-category">
-                    <div class="k-product-contenedor">
-                        <img
-                            src="/medias/videojuegos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxMDl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3Yy9oYjcvMTE0MjQ3OTkzMjYyMzgucG5nfDIwNTc5NzFiODFjNmMwYzZiZTllNTJkYzI5MGQ3MTcxYzY0MGU3OWJlZmJkZGM5NDRmZjY3NWQ3MTlkNGJjNGU" />
-                    </div>
-                    Videojuegos
-                </div>
-            </a>
 
-            <a href="/smartwatch/c/BI_SMAW_ALKOS">
+            <a href="/smartwatch/c/BI_SMAW_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Smartwatch"
                             src="/medias/srmatwatch.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDM3MjR8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g1My9oZWEvMTE0MjQ3OTk2NTM5MTgucG5nfDJmNjFmZGZmM2YzZTk4NWIwNDhlYzIzZmE3MjJjZWE0ODJkYTFmN2Q4ZTQ3ZDdhNTM1YTVkNTI3ZWQ2MDY2ODY" />
                     </div>
                     Smartwatch
                 </div>
             </a>
 
-            <a href="/computadores-tablet/tabletas-ipads/c/BI_107_ALKOS">
+
+            <a href="/computadores-tablet/tabletas-ipads/c/BI_107_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Tabletas"
                             src="/medias/tabletas.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDMzNDB8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g2Yy9oYmQvMTE0MjM1Nzc1Mzg1OTAucG5nfDIzYmJlNjFmMGJhZDQ0ZDI1YmNmYTg1N2UwNjEzNjU0NDgxZDk5M2Y3ODVkZTc3ZWZkNjZiNzQ3NmZjOTM1ODE" />
                     </div>
                     Tabletas
                 </div>
             </a>
 
-            <a href="/juguetes/c/BI_JUGUE_ALKOS">
+            <a href="/videojuegos/juegos/c/BI_132_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
-                            src="/medias/juguete.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQ0NTl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hmYy9oOWMvMTE2ODUxNDY3MjIzMzQucG5nfDU5MjEzOTIyNzY3NTQ0YTNjOGFlZDRlOGVjZTQwMjQ0MzZkY2UwNjFhY2U4MDI5YTk3YjljNDk1ODQwMmIwNmM" />
+                        <img alt="Videojuegos"
+                            src="/medias/videojuegos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxMDl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g3Yy9oYjcvMTE0MjQ3OTkzMjYyMzgucG5nfDIwNTc5NzFiODFjNmMwYzZiZTllNTJkYzI5MGQ3MTcxYzY0MGU3OWJlZmJkZGM5NDRmZjY3NWQ3MTlkNGJjNGU" />
                     </div>
-                    Juguetes
+                    Videojuegos
                 </div>
             </a>
 
-            <a href="/deportes/movilidad/bicicletas-electricas/c/BI_1260_ALKOS">
+            <a href="/audio/audifonos/c/BI_111_KTRON">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Audífonos"
+                            src="/medias/audifonos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDY5NDh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g4ZS9oNzAvMTE0MjUyNDgxNDk1MzQucG5nfDkzMjZkMDEyMTdlNDc3OWU3Mjk5NGNjMDNkYjJmZDUwY2QyZTc5NTBjZmI2NzI5ZjQwZWY1ZTc5ZWI4MjljYjI" />
+                    </div>
+                    Audífonos
+                </div>
+            </a>
+
+            <a href="/deportes/movilidad/bicicletas-electricas/c/BI_1260_KTRON">
+                <div class="k-grid-items-category">
+                    <div class="k-product-contenedor">
+                        <img alt="Deportes"
                             src="/medias/deportes.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDEwMzY2fGltYWdlL3BuZ3xkaWEtc2luLWl2YS9oZTEvaDFkLzExNjg1MTQ1MDE4Mzk4LnBuZ3xhOGUwNDliNTE0OWRmYmMxZWQzNDJmMWUyZWMyMmJkN2IyZmYwNzZhYWMxODM3MGQ1MDQyNmQwNjk0N2IwN2E2" />
                     </div>
                     Deportes
@@ -1100,54 +1153,28 @@
             </a>
 
 
-            <a href="/audio/audifonos/c/BI_111_ALKOS">
-                <div class="k-grid-items-category">
-                    <div class="k-product-contenedor">
-                        <img
-                            src="/medias/audifonos.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDY5NDh8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2g4ZS9oNzAvMTE0MjUyNDgxNDk1MzQucG5nfDkzMjZkMDEyMTdlNDc3OWU3Mjk5NGNjMDNkYjJmZDUwY2QyZTc5NTBjZmI2NzI5ZjQwZWY1ZTc5ZWI4MjljYjI" />
-                    </div>
-                    Audífonos
-                </div>
-            </a>
 
-            <a href="/audio/audifonos/c/BI_111_ALKOS">
+
+
+            <a href="/casa-inteligente-domotica/c/BI_CAIN_KTRON" class="ak-ocultar-desktop">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
+                        <img alt="Cámaras"
                             src="/medias/MicrosoftTeams-image-5-.png?context=bWFzdGVyfGltZy1wYWdpbmFzLWVycm9yLTUwMHwyNjQ1fGltYWdlL3BuZ3xpbWctcGFnaW5hcy1lcnJvci01MDAvaGRlL2g1MS8xMjQxNDExOTQxMTc0Mi5wbmd8NzBmZDMwM2E5M2Q0NzU0ZDlhNTRhMzA1MGMzNDcyYjkyMzVhY2JhY2ZlNDNjNGVkNzFiODQxOGI0NTMxYWMzYw" />
                     </div>
                     Cámaras
                 </div>
             </a>
 
-
-            <a href="/mercado/mascotas/c/BI_185_ALKOS" class=" k-logo-desktop">
+            <a href="/casa-inteligente-domotica/c/BI_CAIN_KTRON" class="ak-ocultar-desktop">
                 <div class="k-grid-items-category">
                     <div class="k-product-contenedor">
-                        <img
-                            src="/medias/lavadoras.png?context=bWFzdGVyfGRpYS1zaW4taXZhfDQxODl8aW1hZ2UvcG5nfGRpYS1zaW4taXZhL2hiNi9oNjUvMTE0MjM1NzQwNjUxODIucG5nfDYyNzNmMTc4NjNlMGQyYjU0MzZlNDRkMzUxOTZmODhhY2M4OGUzNzJmYTEzMmNhNjExMzIyZDJlYmFmY2NmNDk" />
+                        <img alt="Impresoras"
+                            src="/medias/MicrosoftTeams-image-3-.png?context=bWFzdGVyfGltZy1wYWdpbmFzLWVycm9yLTUwMHwyMzAzfGltYWdlL3BuZ3xpbWctcGFnaW5hcy1lcnJvci01MDAvaGQwL2gyMy8xMjQwODM4NzE0MTY2Mi5wbmd8ZDg3Y2UwMWFiOTcwNTBkZTY5NmNlMTYyZTg1OWVmNjUxMGFkNjc2ZDYzMGQ3Nzg0MjNkZjk1ODViYzlkOWIzYQ" />
                     </div>
-                    Mascotas
+                    Impresoras
                 </div>
             </a>
-
-
-
-
-
-
-
-
-            <a href="https://www.alkosto.com/hogar/c/BI_HOGA_ALKOS">
-                <div class="k-grid-items-category">
-                    <div class="k-product-contenedor">
-                        <img
-                            src="/medias/vajilla.jpg?context=bWFzdGVyfHJvb3R8MjgxNnxpbWFnZS9qcGVnfGg0Ny9oMjIvMTIzOTQ3NDAxODcxNjYuanBnfGM1NjVmNzViY2UxZGM4MmM2NDc1MDMxYTE4OGRjNWI1ZDc4YjE5MmYzZjVmNmNlOTNkMzRlN2FiMWY4YTIzNTk" />
-                    </div>
-                    Hogar
-                </div>
-            </a>
-
 
 
 
@@ -1165,59 +1192,64 @@
 
 
 
+
+
+
+
+
 <div class="ak-fondo-gris-desktop">
-    <div class="home-ak-contenedor" style="padding-top: 1px;">
-        <div class="alk-mancheta">
-            <h3>Ofertas Destacadas</h3>
-        </div>
+    <div class="home-ak-contenedor">
+        <k-title-underline type="center" style="padding-top: 16px;">
+            <h3>Ofertas destacadas</h3>
+        </k-title-underline>
         <div class="scroll-mobile-grid">
             <div class="ak-grid-items-destacados">
                 <div class="ak-grid-items-destacado">
-                    <!-- AdGlare: AK_HOME-Destacado-p1 -->
-                    <span id=zone556003567></span>
+                    <!-- AdGlare: KT-Home-Destacado-1 -->
+                    <span id=zone386779260></span>
                     <script>
                         (function (r, d, u) {
                             var s = d.createElement(r); s.async = true;
                             u += '&cb=' + Date.now() + Math.random();
                             s.src = u; var n = d.getElementsByTagName(r)[0];
                             n.parentNode.insertBefore(s, n);
-                        })('script', document, '//engine.alkst.co/?556003567');
+                        })('script', document, '//engine.alkst.co/?386779260');
                     </script>
                 </div>
                 <div class="ak-grid-items-destacado">
-                    <!-- AdGlare: AK_HOME-Destacado-p2 -->
-                    <span id=zone552073562></span>
+                    <!-- AdGlare: KT-Home-Destacado-2 -->
+                    <span id=zone586533011></span>
                     <script>
                         (function (r, d, u) {
                             var s = d.createElement(r); s.async = true;
                             u += '&cb=' + Date.now() + Math.random();
                             s.src = u; var n = d.getElementsByTagName(r)[0];
                             n.parentNode.insertBefore(s, n);
-                        })('script', document, '//engine.alkst.co/?552073562');
+                        })('script', document, '//engine.alkst.co/?586533011');
                     </script>
                 </div>
                 <div class="ak-grid-items-destacado">
-                    <!-- AdGlare: AK_HOME-Destacado-p3 -->
-                    <span id=zone129286758></span>
+                    <!-- AdGlare: KT-Home-Destacado-3 -->
+                    <span id=zone338445076></span>
                     <script>
                         (function (r, d, u) {
                             var s = d.createElement(r); s.async = true;
                             u += '&cb=' + Date.now() + Math.random();
                             s.src = u; var n = d.getElementsByTagName(r)[0];
                             n.parentNode.insertBefore(s, n);
-                        })('script', document, '//engine.alkst.co/?129286758');
+                        })('script', document, '//engine.alkst.co/?338445076');
                     </script>
                 </div>
                 <div class="ak-grid-items-destacado">
-                    <!-- AdGlare: AK_HOME-Destacado-p4 -->
-                    <span id=zone771048778></span>
+                    <!-- AdGlare: KT-Home-Destacado-4 -->
+                    <span id=zone738851836></span>
                     <script>
                         (function (r, d, u) {
                             var s = d.createElement(r); s.async = true;
                             u += '&cb=' + Date.now() + Math.random();
                             s.src = u; var n = d.getElementsByTagName(r)[0];
                             n.parentNode.insertBefore(s, n);
-                        })('script', document, '//engine.alkst.co/?771048778');
+                        })('script', document, '//engine.alkst.co/?738851836');
                     </script>
                 </div>
             </div>
@@ -1230,21 +1262,21 @@
             <a href="/entregas-devoluciones/envio-gratis/c/envio-gratis">
                 <div class="ak-elemento">
                     <img
-                        src="/medias/icono-envio.svg?context=bWFzdGVyfEljb25vcyBBbGtvc3RvfDczOTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQWxrb3N0by9oZDcvaGZiLzEwNDc1MjY5NTIxNDM4LnN2Z3w1NzEzNjAxMDc3NmE1MDU2YjEwNGU0NTg4ZmY1MTJjNjM5NDg5YWVjOWFhZTgyOTUwZTA2MzJkM2I4ZTgxZmQz" />
+                        src="/medias/envio.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDkzOTB8aW1hZ2Uvc3ZnK3htbHxkaWEtc2luLWl2YS9oNzQvaDc1LzExNDI0MjcyMTg3NDIyLnN2Z3xiNGE1MTEyYjUzYjVlOGVmMmU4ODNiN2RjMjVmYmQ0MWRhMGIxZTAwNzFiNGMzOWNlNjlkYTk3ZTM2NDFlMTM1" />
                     Envío Gratis a 600 municipios
                 </div>
             </a>
             <a href="/gana-50">
                 <div class="ak-elemento">
                     <img
-                        src="/medias/icono-50.svg?context=bWFzdGVyfEljb25vcyBBbGtvc3RvfDc4MDZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQWxrb3N0by9oYTMvaGNmLzEwNDc1MjcwMDEyOTU4LnN2Z3xjZjg1NWYwZGVjMjJlMWU2NGZkZjczYTNiMjlmYzIwODA5MmQwZGUyNjg5ZmZmYzRmMzJhMWYyMjZlOTc0MGMx" />
+                        src="/medias/gana-50.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDkzNjB8aW1hZ2Uvc3ZnK3htbHxkaWEtc2luLWl2YS9oOGQvaDViLzExNDI0MjcyNDQ5NTY2LnN2Z3wyN2MzNjZlM2IwYmNhMjY1NWIwMjlhZGU3NmI0ZjY5N2MxMjg0YzliYTNlNTc4ZmI3MTJhYWYzOTNkYWYzNjZl" />
                     Gana la mitad de tu compra
                 </div>
             </a>
             <a href="/entregas-devoluciones/recoge-en-tienda/c/recoge-tienda">
                 <div class="ak-elemento">
                     <img
-                        src="/medias/icono-tiendas.svg?context=bWFzdGVyfEljb25vcyBBbGtvc3RvfDYxMDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQWxrb3N0by9oODcvaDUwLzEwNDc1MjcwNjAyNzgyLnN2Z3w4MzhkOWM1Y2Q5ZjEyMGI4MzE2ZTg0MTM4MGRkYzhjZTQzMDA1MGE4YWNjMGY0M2E1ZTMxZTRhYmMzNmQ3Nzk3" />
+                        src="/medias/tienda.svg?context=bWFzdGVyfGRpYS1zaW4taXZhfDk5MDl8aW1hZ2Uvc3ZnK3htbHxkaWEtc2luLWl2YS9oNmIvaDg0LzExNDI0MjkzNDg2NjIyLnN2Z3xhNjJjOWUzMmM3MzExYjNmNTkxY2IxZmJkOGUyM2FhOTMyNmYyNTUzMjNiNWY1MDVhNDJiZDg2NmUyYzM1MzZl" />
                     Compra en línea y recoge en tienda
                 </div>
             </a>
@@ -1260,53 +1292,45 @@
 </div>
 
 <div class="home-ak-contenedor">
-    <div class="alk-mancheta">
-        <a href="/celulares/c/BI_CELU_ALKOS">
-            <h3>Celulares</h3>
-        </a>
-    </div>
+    <k-title-underline type="center">
+        <h3>Celulares</h3>
+    </k-title-underline>
     <div class="scroll-mobile-grid">
         <div class="ak-grilla-tres-banners">
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Celulares-oferta-destacada-1 -->
-                <span id=zone104525410></span>
+                <!-- AdGlare: KT-Home-Cel-1 -->
+                <span id=zone671902831></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?104525410');
+                    })('script', document, '//engine.alkst.co/?671902831');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Celulares-oferta-2 -->
-                <span id=zone115712158></span>
+                <!-- AdGlare: KT-Home-Cel-2 -->
+                <span id=zone329909392></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?115712158');
+                    })('script', document, '//engine.alkst.co/?329909392');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: Ak-Home-SAP-Celulares-oferta-3 -->
-                <span id=zone680054292></span>
+                <!-- AdGlare: KT-Home-Cel-3-Big -->
+                <span id=zone198623552></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?680054292');
+                    })('script', document, '//engine.alkst.co/?198623552');
                 </script>
             </div>
 
@@ -1316,53 +1340,45 @@
 </div>
 
 <div class="home-ak-contenedor">
-    <div class="alk-mancheta">
-        <a href="/computadores-tablets/c/BI_COMP_ALKOS">
-            <h3>Computadores</h3>
-        </a>
-    </div>
+    <k-title-underline type="center">
+        <h3>Computadores</h3>
+    </k-title-underline>
     <div class="scroll-mobile-grid">
         <div class="ak-grilla-tres-banners">
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Computadores-oferta-destacada-1 -->
-                <span id=zone523159868></span>
+                <!-- AdGlare: KT-Home-Compu-1-Big -->
+                <span id=zone428951500></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?523159868');
+                    })('script', document, '//engine.alkst.co/?428951500');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Computadores-oferta-2 -->
-                <span id=zone132297822></span>
+                <!-- AdGlare: KT-Home-Compu-2 -->
+                <span id=zone522054421></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?132297822');
+                    })('script', document, '//engine.alkst.co/?522054421');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Computadores-oferta-3 -->
-                <span id=zone515017522></span>
+                <!-- AdGlare: KT-Home-Compu-3 -->
+                <span id=zone301695401></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?515017522');
+                    })('script', document, '//engine.alkst.co/?301695401');
                 </script>
             </div>
 
@@ -1373,67 +1389,59 @@
 
 <div class="clear ak-banner-lanzamiento">
     <center>
-        <!-- AdGlare: AK-Home-Sap-Barra-Mercado -->
-        <span id=zone285146830></span>
+        <!-- AdGlare: KT Lanzamientos-banner_web -->
+        <span id=zone524468624></span>
         <script>
             (function (r, d, u) {
                 var s = d.createElement(r); s.async = true;
                 u += '&cb=' + Date.now() + Math.random();
                 s.src = u; var n = d.getElementsByTagName(r)[0];
                 n.parentNode.insertBefore(s, n);
-            })('script', document, '//engine.alkst.co/?285146830');
+            })('script', document, '//engine.alkst.co/?524468624');
         </script>
     </center>
 </div>
 
 <div class="home-ak-contenedor">
-    <div class="alk-mancheta">
-        <a href="/tv-video/c/BI_TVVI_ALKOS">
-            <h3>Televisores</h3>
-        </a>
-    </div>
+    <k-title-underline type="center">
+        <h3>Televisores</h3>
+    </k-title-underline>
     <div class="scroll-mobile-grid">
         <div class="ak-grilla-tres-banners">
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-TV-oferta-destacada-1 -->
-                <span id=zone422332233></span>
+                <!-- AdGlare: KT-Home-TV-1 -->
+                <span id=zone943972322></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?422332233');
+                    })('script', document, '//engine.alkst.co/?943972322');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-TV-oferta-2 -->
-                <span id=zone767578074></span>
+                <!-- AdGlare: KT-Home-TV-2 -->
+                <span id=zone937495230></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?767578074');
+                    })('script', document, '//engine.alkst.co/?937495230');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-TV-oferta-3 -->
-                <span id=zone534373586></span>
+                <!-- AdGlare: KT-Home-TV-3-Big -->
+                <span id=zone139418831></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?534373586');
+                    })('script', document, '//engine.alkst.co/?139418831');
                 </script>
             </div>
 
@@ -1450,53 +1458,83 @@
 
 
 <div class="home-ak-contenedor">
-    <div class="alk-mancheta">
-        <a href="/electrodomesticos/c/BI_ELHO_ALKOS">
-            <h3>Electrodomésticos</h3>
-        </a>
-    </div>
+    <k-title-underline type="center">
+        <h3>Electrodomésticos</h3>
+    </k-title-underline>
     <div class="scroll-mobile-grid">
         <div class="ak-grilla-tres-banners">
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Electrodomesticos-oferta-1 -->
-                <span id=zone569987429></span>
+                <!-- AdGlare: KT-Home-Electro-1-Big -->
+                <span id=zone154128962></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?569987429');
+                    })('script', document, '//engine.alkst.co/?154128962');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Electrodomesticos-oferta-2 -->
-                <span id=zone303189422></span>
+                <!-- AdGlare: KT-Home-Electro-2 -->
+                <span id=zone207108369></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?303189422');
+                    })('script', document, '//engine.alkst.co/?207108369');
                 </script>
             </div>
             <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Electrodomesticos-oferta-destacada-3 -->
-                <span id=zone776497219></span>
+                <!-- AdGlare: KT-Home-Electro-3 -->
+                <span id=zone501111578></span>
                 <script>
                     (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
+                        var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?776497219');
+                    })('script', document, '//engine.alkst.co/?501111578');
+                </script>
+            </div>
+
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Electro-4 -->
+                <span id=zone337887848></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?337887848');
+                </script>
+            </div>
+
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Electro-5 -->
+                <span id=zone202952762></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?202952762');
+                </script>
+            </div>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Electro-6-big -->
+                <span id=zone389987106></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?389987106');
                 </script>
             </div>
 
@@ -1504,196 +1542,206 @@
 
     </div>
 </div>
-
-
-<div class="home-ak-contenedor">
-    <div class="alk-mancheta">
-        <a href="/videojuegos/c/BI_VIJU_ALKOS">
-            <h3>Videojuegos y mas</h3>
-        </a>
-    </div>
-    <div class="scroll-mobile-grid">
-        <div class="ak-grilla-tres-banners">
-            <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Videojuegos-oferta-destacada-1 -->
-                <span id=zone993296107></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?993296107');
-                </script>
-            </div>
-            <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Videojuegos-oferta-2 -->
-                <span id=zone701043050></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?701043050');
-                </script>
-            </div>
-            <div class="ak-grilla-tres-banner">
-                <!-- AdGlare: AK-Home-SAP-Videojuegos-oferta-3 -->
-                <span id=zone913779633></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r);
-                        s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u;
-                        var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?913779633');
-                </script>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
 
 
 
 <div class="home-ak-contenedor">
-    <div class="alk-mancheta">
-        <h3>Conoce más</h3>
-    </div>
+    <k-title-underline type="center">
+        <h3>Videojuegos</h3>
+    </k-title-underline>
     <div class="scroll-mobile-grid">
-        <div class="ak-grid-items-perder">
-            <div class="ak-grid-items-perd">
-                <!-- AdGlare: AK_HOMEperder-p1 -->
-                <span id=zone265531448></span>
+        <div class="ak-grilla-tres-banners">
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Videojuegos-1-Big -->
+                <span id=zone225501379></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?265531448');
+                    })('script', document, '//engine.alkst.co/?225501379');
                 </script>
             </div>
-            <div class="ak-grid-items-perd">
-                <!-- AdGlare: AK_HOMEperder-p2 -->
-                <span id=zone169947954></span>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Videojuegos-2 -->
+                <span id=zone911982003></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?169947954');
+                    })('script', document, '//engine.alkst.co/?911982003');
                 </script>
             </div>
-            <div class="ak-grid-items-perd">
-                <!-- AdGlare: AK_HOMEperder-p3 -->
-                <span id=zone150527615></span>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Videojuegos-3 -->
+                <span id=zone487987149></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?150527615');
+                    })('script', document, '//engine.alkst.co/?487987149');
                 </script>
             </div>
-            <div class="ak-grid-items-perd">
-                <!-- AdGlare: AK_HOMEperder-p4 -->
-                <span id=zone442761329></span>
-                <script>
-                    (function (r, d, u) {
-                        var s = d.createElement(r); s.async = true;
-                        u += '&cb=' + Date.now() + Math.random();
-                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                        n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?442761329');
-                </script>
-            </div>
+
         </div>
     </div>
+
 </div>
 
-<div class="clear ak-banner-lanzamiento">
-    <center>
-        <!-- AdGlare: AK-Home-Sap-Barra-Conoce-mas -->
-        <span id=zone935552712></span>
-        <script>
-            (function (r, d, u) {
-                var s = d.createElement(r); s.async = true;
-                u += '&cb=' + Date.now() + Math.random();
-                s.src = u; var n = d.getElementsByTagName(r)[0];
-                n.parentNode.insertBefore(s, n);
-            })('script', document, '//engine.alkst.co/?935552712');
-        </script>
-    </center>
+
+<div class="home-ak-contenedor">
+    <k-title-underline type="center">
+        <h3>Smartwatch</h3>
+    </k-title-underline>
+    <div class="scroll-mobile-grid">
+        <div class="ak-grilla-tres-banners">
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-SmartW-1 -->
+                <span id=zone904601616></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?904601616');
+                </script>
+            </div>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-SmartW-2 -->
+                <span id=zone207372219></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?207372219');
+                </script>
+            </div>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-SmartW-3-Big -->
+                <span id=zone946284050></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?946284050');
+                </script>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
+<div class="home-ak-contenedor">
+    <k-title-underline type="center">
+        <h3>Audio</h3>
+    </k-title-underline>
+    <div class="scroll-mobile-grid">
+        <div class="ak-grilla-tres-banners">
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Audio-1-Big -->
+                <span id=zone110137307></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?110137307');
+                </script>
+            </div>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Audio-2 -->
+                <span id=zone634496634></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?634496634');
+                </script>
+            </div>
+            <div class="ak-grilla-tres-banner">
+                <!-- AdGlare: KT-Home-Audio-3 -->
+                <span id=zone289074810></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?289074810');
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 
 <div class="home-ak-contenedor ak-mob-sep alto-mob">
-
-    <div class="alk-mancheta">
-        <h3>Beneficios con bancos</h3>
-    </div>
-
-
+    <k-title-underline type="center">
+        <h3>Medios de pago</h3>
+    </k-title-underline>
     <div class="scroll-mobile-grid">
         <div class="ak-grid-items-bancos">
             <div class="ak-grid-items-banco">
-                <!-- AdGlare: AK_HOME-banco-p1 -->
-                <span id=zone302229070></span>
+                <!-- AdGlare: KT_HOME-banco-p1 -->
+                <span id=zone751004413></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?302229070');
+                    })('script', document, '//engine.alkst.co/?751004413');
                 </script>
             </div>
             <div class="ak-grid-items-banco">
-                <!-- AdGlare: AK_HOME-banco-p2 -->
-                <span id=zone147879260></span>
+                <!-- AdGlare: KT_HOME-banco-p2 -->
+                <span id=zone538913717></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?147879260');
+                    })('script', document, '//engine.alkst.co/?538913717');
                 </script>
             </div>
             <div class="ak-grid-items-banco">
-                <!-- AdGlare: AK_HOME-banco-p3 -->
-                <span id=zone252229758></span>
+                <!-- AdGlare: KT_HOME-banco-p3 -->
+                <span id=zone726964570></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?252229758');
+                    })('script', document, '//engine.alkst.co/?726964570');
                 </script>
             </div>
             <div class="ak-grid-items-banco">
-                <!-- AdGlare: AK_HOME-banco-p4 -->
-                <span id=zone792072404></span>
+                <!-- AdGlare: KT_HOME-banco-p4 -->
+                <span id=zone964395505></span>
                 <script>
                     (function (r, d, u) {
                         var s = d.createElement(r); s.async = true;
                         u += '&cb=' + Date.now() + Math.random();
                         s.src = u; var n = d.getElementsByTagName(r)[0];
                         n.parentNode.insertBefore(s, n);
-                    })('script', document, '//engine.alkst.co/?792072404');
+                    })('script', document, '//engine.alkst.co/?964395505');
                 </script>
             </div>
         </div>
