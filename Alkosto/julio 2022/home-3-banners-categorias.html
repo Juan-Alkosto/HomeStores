@@ -713,17 +713,33 @@
 <div class="ak-ocultar-mob">
     <div class="ak-elementos-confianza-mob">
         <div class="ak-elemento">
-            <!-- AdGlare: AK-HOME-elementos de confianza -->
-            <span id=zone865005877></span>
+            <span id="zone580359426" class="mostrar"></span>
             <script>
-                (function (r, d, u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?865005877');
+              (function (r, d, u) {
+                var s = d.createElement(r);
+                s.async = true;
+                u += "&cb=" + Date.now() + Math.random();
+                s.src = u;
+                var n = d.getElementsByTagName(r)[0];
+                n.parentNode.insertBefore(s, n);
+              })("script", document, "https://engine.alkst.co/?580359426");
             </script>
-        </div>
+      
+      
+            <!-- AdGlare: AK-HOME-elementos de confianza -->
+            <span id="zone865005877" class="ocultar"></span>
+            <script>
+              (function (r, d, u) {
+                var s = d.createElement(r);
+                s.async = true;
+                u += "&cb=" + Date.now() + Math.random();
+                s.src = u;
+                var n = d.getElementsByTagName(r)[0];
+                n.parentNode.insertBefore(s, n);
+              })("script", document, "https://engine.alkst.co/?865005877");
+            </script>
+      
+          </div>
     </div>
 </div>
 <div class="home-ak-contenedor ak-fondo-gris">
@@ -1548,3 +1564,86 @@
         </div>
     </div>
 </div>
+<style>
+    @keyframes desvanecer {
+      0% {
+        transform: translate(0, 0);
+      }
+      40% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, 0);
+      }
+      60% {
+        transform: translate(-50%, 0);
+      }
+      70% {
+        transform: translate(-50%, 0);
+      }
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+    .ak-elemento {
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      line-height: 50px;
+    }
+    .ocultar {
+      display: none;
+    }
+    .mostrar {
+      display: block;
+      padding-left: 100%;
+      animation: desvanecer 8s cubic-bezier(0.35, 0.01, 0.36, 1) infinite;
+    }
+    @media (max-width: 540px) {
+      .mostrar {
+        min-width: 1080px;
+        
+      }
+    }
+    @media (max-width: 425px) {
+      .mostrar {
+        min-width: 850px;
+        
+      }
+    }
+    @media (max-width: 375px) {
+      .mostrar {
+        min-width: 750px;
+        
+      }
+    }
+    @media (max-width: 325px) {
+      .mostrar {
+        min-width: 650px;
+        
+      }
+    }
+  </style>
+  <script>
+    const envio = document.getElementById("zone865005877");
+const gana = document.getElementById("zone580359426");
+
+setInterval(function(){
+
+if (gana.classList.contains("mostrar")) {
+
+        gana.classList.remove("mostrar");
+        gana.classList.add("ocultar");
+        envio.classList.remove("ocultar");
+        envio.classList.add("mostrar")
+    
+} else  if (gana.classList.contains("ocultar")){
+
+        envio.classList.remove("mostrar");
+        envio.classList.add("ocultar");
+        gana.classList.remove("ocultar");
+        gana.classList.add("mostrar")
+
+}},7000);
+
+  </script>
